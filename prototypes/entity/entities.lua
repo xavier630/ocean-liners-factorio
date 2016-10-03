@@ -4,7 +4,7 @@ data:extend({
         name = "paddle_steamer",
         icon = "__base__/graphics/icons/car.png",
         flags = {"pushable", "placeable-neutral", "player-creation", "placeable-off-grid"},
-        minable = {mining_time = 1, result = "car"},
+        minable = {mining_time = 1, result = "paddle_steamer"},
         max_health = 200,
         corpse = "medium-remnants",
         dying_explosion = "medium-explosion",
@@ -23,7 +23,7 @@ data:extend({
           }
         },
         collision_mask = {"ground-tile"},
-        collision_box = {{-0.7, -1}, {0.7, 1}},
+        collision_box = {{-0.2, -0.4}, {0.2, 0.4}},
         selection_box = {{-0.7, -1}, {0.7, 1}},
         effectivity = 0.5,
         braking_power = "200kW",
@@ -35,15 +35,15 @@ data:extend({
           {
             {
               name = "car-smoke",
-              deviation = {0.25, 0.25},
-              frequency = 200,
-              position = {0, 1.5},
-              starting_frame = 0,
+              deviation = {0.45, 0.45},
+              frequency = 300,
+              position = {0, 0.35},
+              starting_frame = 1,
               starting_frame_deviation = 60
             }
           }
         },
-        consumption = "150kW",
+        consumption = "100kW",
         friction = 2e-3,
         light =
         {
@@ -237,8 +237,8 @@ data:extend({
         },
         open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
         close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
-        rotation_speed = 0.015,
-        weight = 700,
+        rotation_speed = 0.010,
+        weight = 1200,
         guns = { "vehicle-machine-gun" },
         inventory_size = 115
       }

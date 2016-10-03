@@ -1,0 +1,4 @@
+I need to give due credit to the pair behind RailTanker (Choumiko and jamesofarell)
+
+Because they made their mod open source, I was able to learn a lot from it and
+even used it as a boilerplate for this mod.

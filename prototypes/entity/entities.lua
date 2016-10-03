@@ -1,10 +1,10 @@
 data:extend({
   {
         type = "car",
-        name = "paddle_steamer",
+        name = "paddle-steamer",
         icon = "__base__/graphics/icons/car.png",
         flags = {"pushable", "placeable-neutral", "player-creation", "placeable-off-grid"},
-        minable = {mining_time = 1, result = "paddle_steamer"},
+        minable = {mining_time = 1, result = "paddle-steamer"},
         max_health = 200,
         corpse = "medium-remnants",
         dying_explosion = "medium-explosion",
@@ -18,7 +18,7 @@ data:extend({
           },
           {
             type = "impact",
-            percent = 60,
+            percent = 80,
             decrease = 30
           }
         },

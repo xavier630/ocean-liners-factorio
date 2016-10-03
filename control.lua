@@ -18,6 +18,8 @@ calc_orientation=function(player, car)
   dy = Cy - Py
   orientation = math.atan(dx / dy)
   orientation = math.deg(orientation) --convert to degrees
+  player.surface.print("Px, Py, Cx, Cy, Deg: " .. Px .. Py .. Cx .. Cy .. orientation)
+
   orientation  = (orientation / 360)--convert so out of 1
   if Px > Cx and Py > Cy then
     -- +0 (do nothing)
@@ -42,7 +44,7 @@ end
    player.surface.print(player.name)
    --find closest ship, pull it towards player.
    --otherwise check if in vehicle. If not, find closest vehicle. Teleport player to closest land by vehicle
-   if player.character.vehicle and player.character.vehicle.name == "paddle_steamer" then
+   if player.character.vehicle and player.character.vehicle.name == "paddle-steamer" then
      lastBoat = player.character.vehicle
      player.surface.print("lastBoat set to: " .. lastBoat.name)
 
@@ -52,7 +54,6 @@ end
 
        local position = player.position;
        player.surface.print("Last boat is:" .. lastBoat.name)
-       player.surface.print(position.x .. position.y)
        --search for nearest land to lastBoat.position
        --player.teleport({position.x, position.y})
        --lastBoat.orientation = lastBoat.orientation + 0.5;
@@ -69,7 +70,7 @@ end
  end)
  script.on_event(defines.events.on_tick, function(event)
    player = game.players[1]
-   if player.character.vehicle and player.character.vehicle.name == "paddle_steamer" then
+   if player.character.vehicle and player.character.vehicle.name == "paddle-steamer" then
      lastBoat = player.character.vehicle
    end
  end)

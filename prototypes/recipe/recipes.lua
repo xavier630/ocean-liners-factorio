@@ -2,7 +2,7 @@ data:extend(
   {
     {
       type = "recipe",
-      name = "paddle_steamer",
+      name = "paddle-steamer",
       enabled = "true",
       ingredients =
       {
@@ -11,6 +11,6 @@ data:extend(
         {"iron-gear-wheel", 10} ]]
         {"iron-plate", 1}
       },
-      result = "paddle_steamer"
+      result = "paddle-steamer"
     },
   })

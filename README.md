@@ -1,7 +1,7 @@
 # Ocean-Liners-Factorio
 This mods adds ships to Factorio.
 
-Drivable ships to sail across the oceans. Can even use landfill from within a ship!
+Drivable ships to sail across the oceans. You can even use landfill from within a ship!
 
 Ideas: <br>
 
@@ -11,4 +11,3 @@ Different Ships <br>
 Paths between docks. <br>
 Mounted Turrets <br>
 Pumpable Oil Spouts in the Ocean <br>
-

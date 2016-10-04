@@ -13,9 +13,11 @@ Pump-able Oil Spouts in the Ocean (Yay!) <br>
 
 Current TODO <br>
 
-Make fish shootable <br>
+Make fish shootable - maybe need to overwrite them in entity or something like that - otherwise have the selector in lua <br>
 Faster Ironclad cannon shots <br>
-Add a dock which is of type pump to start with - has to be placed by the ocean <br>
+Add separate oil pump (separate to the dock which pumps oil) and add spouts <br>
+Fix dock recipe
+
 
 
 Installation <br>
@@ -23,4 +25,4 @@ Installation <br>
 Download as a zip and make sure to save it as 'OceanLiner_1.4.0' <br>
 Put the zip in your mods folder! <br>
 For Windows:  run -> %appdata% -> .roaming/factorio <br>
-Ubuntu: ~/.factorio 
+Ubuntu: ~/.factorio

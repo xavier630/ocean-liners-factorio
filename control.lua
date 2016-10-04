@@ -3,7 +3,7 @@ require "util"
 --require "defines"
 local last_boat
 script.on_init(function()
-
+  --data.raw["capsule"]["raw-fish"].
 end)
 
 face_left=function(car)

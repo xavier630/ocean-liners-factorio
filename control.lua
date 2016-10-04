@@ -37,16 +37,16 @@ calc_orientation=function(player, car)
   --player.surface.print("Deg: " ..orientation)
   if Px < Cx and Py > Cy then
     orientation = 0.5 + orientation
-    player.surface.print("Bottom left quad")
+    --player.surface.print("Bottom left quad")
 
   end
   if Px < Cx and Py < Cy then
     orientation = 1 - orientation
-    player.surface.print("Top left quad")
+  --  player.surface.print("Top left quad")
   end
   if Px > Cx and Py > Cy then
     orientation = 0.5 - orientation
-    player.surface.print("Bottom right quad")
+  --  player.surface.print("Bottom right quad")
   end
   car.orientation = orientation
   return true
@@ -71,7 +71,7 @@ end
 
        local position = player.position;
        calc_orientation(player, last_boat)
-       last_boat.speed = 0.05
+       --last_boat.speed = 0.05
      end
 
 
@@ -88,7 +88,7 @@ end
  end)]]
  script.on_event(defines.events.on_entity_died, function(event)
    if event.entity.name == "fish" then
-     player = game.players[1]
+     player = game.players[1] --TODO give to the right player
      player.character.insert{name="cannon-shell", count=8}
    end
  end)

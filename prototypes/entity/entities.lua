@@ -4,7 +4,7 @@ data:extend({
         name = "ironclad",
         icon = "__base__/graphics/icons/car.png",
         flags = {"pushable", "placeable-neutral", "player-creation", "placeable-off-grid"},
-        minable = {mining_time = 1, result = "ironclad"},
+        minable = {mining_time = 0.5, result = "ironclad"},
         max_health = 200,
         corpse = "medium-remnants",
         dying_explosion = "medium-explosion",
@@ -192,7 +192,7 @@ data:extend({
             }
           }
         },
-        turret_rotation_speed = 0.35 / 60,
+        turret_rotation_speed = 0.45 / 60,
         sound_no_fuel =
         {
           {
@@ -216,32 +216,14 @@ data:extend({
         },
         sound_minimum_speed = 0.2;
         vehicle_impact_sound =  { filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65 },
-        working_sound =
-        {
-          sound =
-          {
-            filename = "__base__/sound/car-engine.ogg",
-            volume = 0.6
-          },
-          activate_sound =
-          {
-            filename = "__base__/sound/car-engine-start.ogg",
-            volume = 0.6
-          },
-          deactivate_sound =
-          {
-            filename = "__base__/sound/car-engine-stop.ogg",
-            volume = 0.6
-          },
-          match_speed_to_activity = true,
-        },
+
         open_sound = { filename = "__base__/sound/car-door-open.ogg", volume=0.7 },
         close_sound = { filename = "__base__/sound/car-door-close.ogg", volume = 0.7 },
         rotation_speed = 0.010,
         weight = 1200,
         guns = { "tank-cannon", "tank-machine-gun" },
         turret_rotation_speed = 0.95 / 60,
-        turret_return_timeout = 300,
+        turret_return_timeout = 200,
         turret_animation =
         {
           layers =
@@ -285,7 +267,7 @@ data:extend({
         name = "paddle-steamer",
         icon = "__base__/graphics/icons/car.png",
         flags = {"pushable", "placeable-neutral", "player-creation", "placeable-off-grid"},
-        minable = {mining_time = 1, result = "paddle-steamer"},
+        minable = {mining_time = 0.5, result = "paddle-steamer"},
         max_health = 200,
         corpse = "medium-remnants",
         dying_explosion = "medium-explosion",

@@ -16,7 +16,9 @@ Current TODO <br>
 Make fish shootable - maybe need to overwrite them in entity or something like that - otherwise have the selector in lua <br>
 Faster Ironclad cannon shots <br>
 Add separate oil pump (separate to the dock which pumps oil) and add spouts <br>
-Fix dock recipe
+Fix dock recipe <br>
+Dock functionality - pulls in ships when player gets out nearby <br>
+Dock + ship textures <br>
 
 
 

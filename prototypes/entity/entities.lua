@@ -604,7 +604,7 @@ data:extend({
           richness_base = 6000,
           richness_multiplier = 30000,
           richness_multiplier_distance_bonus = 10,
-          coverage = 0.82, -- Cover on average 2% of surface area.
+          coverage = 0.02, -- Cover on average 2% of surface area.
           peaks =
           {
             {

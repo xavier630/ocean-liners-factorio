@@ -3,9 +3,8 @@ require "util"
 --require "defines"
 local last_boat
 script.on_init(function()
-  --data.raw["capsule"]["raw-fish"].
-end)
 
+end)
 face_left=function(car)
   car.orientation =  0.75
   return true
@@ -95,7 +94,6 @@ end
  script.on_event(defines.events.on_chunk_generated, function(event) --delete all resources on water except oil
    local box = event.area
    local surface = event.surface
-   --{box.left_top.x, box.left_top.y}, {box.right_bottom.x, box.right_bottom.y}
    local entities = surface.find_entities_filtered{area = box, type = "resource"}
    for _, i in pairs(entities) do
      local pos = i.position

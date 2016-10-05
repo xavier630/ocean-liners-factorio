@@ -3,7 +3,7 @@ This mods adds ships to Factorio.
 
 Drivable ships to sail across the oceans. You can even use landfill from within a ship!
 
-Ideas: <br>
+#Ideas: <br>
 
 Side Cannons On Frigates <br>
 Docks - Can take inserters, boat stays near, player deposited in same location <br>
@@ -13,10 +13,10 @@ Pump-able Oil Spouts in the Ocean (Yay!) <br>
 Quays <br>
 
 
-Current TODO <br>
+#Current TODO <br>
 
-Make fish shootable - maybe need to overwrite them in entity or something like that - otherwise have the selector in lua <br>
-Faster Ironclad cannon shots <br>
+*Make fish shootable - maybe need to overwrite them in entity or something like that - otherwise have the selector in lua 
+*Faster Ironclad cannon shots
 Add separate oil pump (separate to the dock which pumps oil) and add spouts <br>
 Turret Parallax <br>
 Sea oil configurable at new game screen <br>

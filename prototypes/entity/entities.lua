@@ -569,7 +569,7 @@ data:extend({
       },
       {
         type = "resource",
-        name = "crude-oil",
+        name = "sea-oil",
         icon = "__base__/graphics/icons/crude-oil.png",
         flags = {"placeable-neutral", "placeable-off-grid"},
         category = "basic-fluid",
@@ -577,6 +577,7 @@ data:extend({
         infinite = true,
         minimum = 1500,
         normal = 15000,
+        layer = "doodad",
         minable =
         {
           hardness = 1,
@@ -603,7 +604,7 @@ data:extend({
           richness_base = 6000,
           richness_multiplier = 30000,
           richness_multiplier_distance_bonus = 10,
-          coverage = 0.42, -- Cover on average 2% of surface area.
+          coverage = 0.82, -- Cover on average 2% of surface area.
           peaks =
           {
             {

@@ -1,31 +1,55 @@
-data.raw["technology"]["worker-robots-speed-5"] = nil
+data.raw["tile"]["deepwater"] = nil
 data:extend({
   {
-  type = "technology",
-  name = "worker-robots-speed-5",
-  icon = "__base__/graphics/technology/worker-robots-speed.png",
-  effects =
+  type = "tile",
+  name = "deepwater",
+  collision_mask =
   {
+    
+    "player-layer",
+    "doodad-layer"
+  },
+  autoplace = water_autoplace_settings(250),
+  layer = 45,
+  variants =
   {
-    type = "worker-robot-speed",
-    modifier = "0.65"
-  }
+    main =
+    {
+      {
+        picture = "__base__/graphics/terrain/deepwater/deepwater1.png",
+        count = 8,
+        size = 1
+      },
+      {
+        picture = "__base__/graphics/terrain/deepwater/deepwater2.png",
+        count = 8,
+        size = 2
+      },
+      {
+        picture = "__base__/graphics/terrain/deepwater/deepwater4.png",
+        count = 6,
+        size = 4
+      }
+    },
+    inner_corner =
+    {
+      picture = "__base__/graphics/terrain/deepwater/deepwater-inner-corner.png",
+      count = 6
+    },
+    outer_corner =
+    {
+      picture = "__base__/graphics/terrain/deepwater/deepwater-outer-corner.png",
+      count = 6
+    },
+    side =
+    {
+      picture = "__base__/graphics/terrain/deepwater/deepwater-side.png",
+      count = 8
+    }
   },
-  prerequisites = {"worker-robots-speed-4"},
-  unit =
-  {
-  count = 400,
-  ingredients =
-  {
-    {"alien-science-pack", 1},
-    {"science-pack-1", 1},
-    {"science-pack-2", 1},
-    {"science-pack-3", 1}
-  },
-  time = 60
-  },
-  upgrade = true,
-  order = "c-k-f-e"
-  },
+  allowed_neighbors = { "water" },
+  map_color={r=0.0941, g=0.2823, b=0.345},
+  ageing=0.0006
+},
 
 })

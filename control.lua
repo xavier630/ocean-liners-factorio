@@ -92,3 +92,18 @@ end
      player.character.insert{name="cannon-shell", count=8}
    end
  end)
+ script.on_event(defines.events.on_chunk_generated, function(event) --delete all resources on water except oil
+   local box = event.area
+   local surface = event.surface
+   --{box.left_top.x, box.left_top.y}, {box.right_bottom.x, box.right_bottom.y}
+   local entities = surface.find_entities_filtered{area = box, type = "resource"}
+   for _, i in pairs(entities) do
+     local pos = i.position
+     local tile = surface.get_tile(pos.x, pos.y)
+     if tile.name == "deepwater" then
+       if i.name ~= "sea-oil" then
+        i.destroy()
+       end
+     end
+   end
+ end)

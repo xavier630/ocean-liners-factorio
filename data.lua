@@ -3,7 +3,7 @@ data:extend(
   {
     { type = "item-group",
       name = "oceanliner",
-      icon = "__OceanLiner__/graphics/rail-tanker-icon.png",
+      icon = "__OceanLiner__/graphics/paddle-steamer-icon.jpg",
       order = "z"
     },
 

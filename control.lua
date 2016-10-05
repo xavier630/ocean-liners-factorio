@@ -80,13 +80,13 @@ end
    end
 
  end)
- --[[script.on_event(defines.events.on_tick, function(event)
-   player = game.players[1]
+ script.on_event(defines.events.on_tick, function(event)
+  --[[ player = game.players[1]
    if player.character.vehicle and player.character.vehicle.name == "paddle-steamer" then
      last_boat = player.character.vehicle
-   end
- end)]]
- script.on_event(defines.events.on_entity_died, function(event)
+   end]]
+ end)
+ script.on_event(defines.events.on_entity_died, function(event) --Receive shells for killing fish
    if event.entity.name == "fish" then
      player = game.players[1] --TODO give to the right player
      player.character.insert{name="cannon-shell", count=8}

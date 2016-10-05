@@ -26,9 +26,9 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 
 
 
-Installation <br>
+#Installation <br>
 
-Download as a zip and make sure to save it as 'OceanLiner_1.4.0' <br>
-Put the zip in your mods folder! <br>
-For Windows:  run -> %appdata% -> .roaming/factorio <br>
-Ubuntu: ~/.factorio
+* Download as a zip and make sure to save it as 'OceanLiner_1.4.0' <br>
+* Put the zip in your mods folder! <br>
+* For Windows:  run -> %appdata% -> .roaming/factorio <br>
+* Ubuntu: ~/.factorio

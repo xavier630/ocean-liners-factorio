@@ -577,7 +577,7 @@ data:extend({
         infinite = true,
         minimum = 1500,
         normal = 15000,
-        layer = "doodad",
+        --layer = "doodad",
         minable =
         {
           hardness = 1,

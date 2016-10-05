@@ -8,17 +8,21 @@ Ideas: <br>
 Side Cannons On Frigates <br>
 Docks - Can take inserters, boat stays near, player deposited in same location <br>
 Sailing Ships - acceleration dependent on Wind <br>
-Paths between docks. - sounds hard ;) <br>
+Paths between docks. - sounds hard - maybe with invisible rails ;) <br>
 Pump-able Oil Spouts in the Ocean (Yay!) <br>
+Quays <br>
+
 
 Current TODO <br>
 
 Make fish shootable - maybe need to overwrite them in entity or something like that - otherwise have the selector in lua <br>
 Faster Ironclad cannon shots <br>
 Add separate oil pump (separate to the dock which pumps oil) and add spouts <br>
-Fix dock recipe <br>
+Turret Parallax <br>
+Sea oil configurable at new game screen <br>
 Dock functionality - pulls in ships when player gets out nearby <br>
 Dock + ship textures <br>
+
 
 
 

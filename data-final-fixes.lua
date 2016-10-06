@@ -1,5 +1,7 @@
 data.raw["tile"]["deepwater"] = nil
 data.raw["fish"]["fish"] = nil
+data.raw["pipe"]["pipe"] = nil
+
 
 
 data:extend({
@@ -10,7 +12,6 @@ data:extend({
     {
 
       "player-layer",
-      "doodad-layer"
     },
     autoplace = water_autoplace_settings(250),
     layer = 45,
@@ -83,6 +84,55 @@ data:extend({
     autoplace = {
       influence = 0.01
     }
+  },
+  {
+    type = "pipe",
+    name = "pipe",
+    icon = "__base__/graphics/icons/pipe.png",
+    flags = {"placeable-neutral", "player-creation"},
+    minable = {hardness = 0.2, mining_time = 0.5, result = "pipe"},
+    max_health = 50,
+    corpse = "small-remnants",
+    collision_mask =
+    {
+
+
+    },
+    resistances =
+    {
+      {
+        type = "fire",
+        percent = 90
+      }
+    },
+    fast_replaceable_group = "pipe",
+    collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    fluid_box =
+    {
+      base_area = 1,
+      pipe_connections =
+      {
+        { position = {0, -1} },
+        { position = {1, 0} },
+        { position = {0, 1} },
+        { position = {-1, 0} }
+      },
+    },
+    pictures = pipepictures(),
+    working_sound =
+    {
+      sound = {
+        {
+          filename = "__base__/sound/pipe.ogg",
+          volume = 0.85
+        },
+      },
+      match_volume_to_activity = true,
+      max_sounds_per_type = 3
+    },
+    horizontal_window_bounding_box = {{-0.25, -0.25}, {0.25, 0.15625}},
+    vertical_window_bounding_box = {{-0.28125, -0.40625}, {0.03125, 0.125}}
   },
 
 

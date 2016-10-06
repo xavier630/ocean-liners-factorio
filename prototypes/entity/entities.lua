@@ -571,13 +571,12 @@ data:extend({
         type = "resource",
         name = "sea-oil",
         icon = "__base__/graphics/icons/crude-oil.png",
-        flags = {"placeable-neutral", "placeable-off-grid"},
+        flags = {"placeable-neutral"},
         category = "basic-fluid",
         order="a-b-a",
         infinite = true,
         minimum = 1500,
         normal = 15000,
-        --layer = "doodad",
         minable =
         {
           hardness = 1,
@@ -635,19 +634,18 @@ data:extend({
         name = "oil-rig",
         collision_mask =
         {
-          "ground-tile",
 
         },
         icon = "__base__/graphics/icons/pumpjack.png",
-        flags = {"placeable-neutral", "player-creation", "placeable-off-grid"},
-        minable = {mining_time = 1, result = "pumpjack"},
+        flags = {"placeable-neutral", "player-creation"},
+        minable = {mining_time = 1, result = "oil-rig"},
         resource_categories = {"basic-fluid"},
         max_health = 100,
         corpse = "big-remnants",
         dying_explosion = "medium-explosion",
         collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
         selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},
-        drawing_box = {{-1.6, -2.5}, {1.5, 1.6}},
+        --drawing_box = {{-1.6, -2.5}, {1.5, 1.6}},
         energy_source =
         {
           type = "electric",

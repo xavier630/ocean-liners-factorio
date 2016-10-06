@@ -10,19 +10,20 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Sailing Ships - acceleration dependent on Wind <br>
 * Paths between docks. - sounds hard - maybe with invisible rails ;) <br>
 * Pump-able Oil Spouts in the Ocean (Yay!) <br>
-* Quays 
+* Quays
 * Add Oceans
 
 
 #Current TODO <br>
 
-* Make fish shootable - maybe need to overwrite them in entity or something like that - otherwise have the selector in lua 
+* Make fish shootable - maybe need to overwrite them in entity or something like that - otherwise have the selector in lua
 * Faster Ironclad cannon shots
 * Add separate oil pump (separate to the dock which pumps oil) and add spouts <br>
 * Turret Parallax <br>
 * Sea oil configurable at new game screen <br>
 * Dock functionality - pulls in ships when player gets out nearby <br>
 * Dock + ship textures <br>
+* Oil in Shallow water too?
 
 
 

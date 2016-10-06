@@ -39,5 +39,18 @@ data:extend(
       },
       result = "dock"
     },
+    {
+      type = "recipe",
+      name = "oil-rig",
+      enabled = "true",
+      ingredients =
+      {
+      --[[  {"iron-plate", 20},
+        {"steel-plate", 10},
+        {"iron-gear-wheel", 10} ]]
+        {"iron-plate", 1}
+      },
+      result = "oil-rig"
+    },
 
   })

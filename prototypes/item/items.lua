@@ -30,4 +30,14 @@ data:extend(
       place_result = "dock",
       stack_size = 50
     },
+    {
+      type = "item",
+      name = "oil-rig",
+      icon = "__OceanLiner__/graphics/paddle-steamer-icon.jpg",
+      flags = {"goes-to-quickbar"},
+      --subgroup = "transport",
+      order = "a[train-system]-h[ocean-liner]-z",
+      place_result = "oil-rig",
+      stack_size = 50
+    },
   })

@@ -91,6 +91,20 @@ end
      player.character.insert{name="cannon-shell", count=8}
    end
  end)
+--[[ script.on_event(defines.events.on_player_crafted_item, function(event) --Script to test for entities around the player
+     local player = game.players[event.player_index]
+     local surface = player.surface
+     local position = player.position
+     local pos1 = position.x - 5
+     local pos2 = position.y - 5
+     local pos3 = position.x + 5
+     local pos4 = position.y + 5
+     local entities = surface.find_entities({{pos1, pos2}, {pos3, pos4}})
+     for _, entity in pairs(entities) do
+      surface.print(entity.name)
+     end
+
+ end)]]
  script.on_event(defines.events.on_chunk_generated, function(event) --delete all resources on water except oil
    local box = event.area
    local surface = event.surface

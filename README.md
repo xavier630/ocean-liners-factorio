@@ -24,6 +24,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Dock functionality - pulls in ships when player gets out nearby <br>
 * Dock + ship textures <br>
 * Oil in Shallow water too?
+* Remove plants in water?
 
 
 

@@ -113,7 +113,7 @@ end
      local pos = i.position
      local tile = surface.get_tile(pos.x, pos.y)
      if tile.name == "deepwater" then
-       if i.name ~= "sea-oil" then
+       if i.name ~= "crude-oil" then
         i.destroy()
        end
      end

@@ -1,7 +1,8 @@
 
 data:extend(
   {
-    { type = "item-group",
+    {
+      type = "item-group",
       name = "oceanliner",
       icon = "__OceanLiner__/graphics/paddle-steamer-icon.jpg",
       order = "z"

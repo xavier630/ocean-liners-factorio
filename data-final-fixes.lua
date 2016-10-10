@@ -1,17 +1,18 @@
 data.raw["tile"]["deepwater"] = nil
 data.raw["fish"]["fish"] = nil
 data.raw["pipe"]["pipe"] = nil
-data.raw["resource"]["crude-oil"].collision_mask = {"resource-layer", "floor-layer", "item-layer", "object-layer", "ghost-layer"}
-data.raw["resource"]["crude-oil"].autoplace.coverage = 0.82
+
+--data.raw["resource"]["crude-oil"].collision_mask = {"resource-layer", "floor-layer", "item-layer", "object-layer", "ghost-layer"}
+--data.raw["resource"]["crude-oil"].autoplace.coverage = 0.82
 
 
 
 
 
 data:extend({
-  --[[{
+  {
     type = "resource",
-    name = "crude-oil",
+    name = "sea-oil",
     icon = "__base__/graphics/icons/crude-oil.png",
     flags = {"placeable-neutral"},
     category = "basic-fluid",
@@ -34,18 +35,18 @@ data:extend({
         }
       }
     },
-    collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
+    collision_box = {{0, 0}, {0, 0}},--{{ -1.4, -1.4}, {1.4, 1.4}},
     selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
-    collision_mask = {},--{"ground-tile"},
+    collision_mask = {"resource-layer", "floor-layer", "item-layer", "object-layer", "ghost-layer", "ground-tile"},
     autoplace =
     {
       control = "crude-oil",
       sharpness = 0.99,
-      max_probability = 0.035,
-      richness_base = 6000,
-      richness_multiplier = 30000,
+      max_probability = 0.055,
+      richness_base = 8000,
+      richness_multiplier = 35000,
       richness_multiplier_distance_bonus = 10,
-      coverage = 0.82, -- Cover on average 2% of surface area.
+      coverage = 0.04, -- Cover on average 2% of surface area.
       peaks =
       {
         {
@@ -70,7 +71,7 @@ data:extend({
     },
     map_color = {r=0.8, g=0.1, b=0.8},
     map_grid = false
-  },]]
+  },
   {
     type = "mining-drill",
     name = "oil-rig",

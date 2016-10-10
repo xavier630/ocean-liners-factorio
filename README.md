@@ -9,7 +9,6 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Docks - Can take inserters, boat stays near, player deposited in same location <br>
 * Sailing Ships - acceleration dependent on Wind <br>
 * Paths between docks. - sounds hard - maybe with invisible rails ;) <br>
-* Pump-able Oil Spouts in the Ocean (Yay!) <br>
 * Quays
 * Add Oceans
 
@@ -22,11 +21,12 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Turret Parallax <br>
 * Sea oil configurable at new game screen <br>
 * Dock functionality - pulls in ships when player gets out nearby <br>
-* Dock + ship textures <br>
+* Dock + ship + rig + power pole textures  <br>
 * Oil in Shallow water too?
 * Remove plants in water?
 * New type of self-sufficient offshore pumps (takes accumlators and solar panels in the crafting)
-* 
+* All types of pipes over water
+*
 
 
 

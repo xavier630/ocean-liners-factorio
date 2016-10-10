@@ -6,10 +6,8 @@ data:extend(
       enabled = "true",
       ingredients =
       {
-      --[[  {"iron-plate", 20},
-        {"steel-plate", 10},
-        {"iron-gear-wheel", 10} ]]
-        {"iron-plate", 1}
+        {"iron-plate", 10},
+        {"iron-gear-wheel", 5},
       },
       result = "paddle-steamer"
     },
@@ -19,10 +17,9 @@ data:extend(
       enabled = "true",
       ingredients =
       {
-      --[[  {"iron-plate", 20},
+        {"iron-plate", 30},
         {"steel-plate", 10},
-        {"iron-gear-wheel", 10} ]]
-        {"iron-plate", 1}
+        {"iron-gear-wheel", 30},
       },
       result = "ironclad"
     },
@@ -33,10 +30,9 @@ data:extend(
 
       ingredients =
       {
-      --[[  {"iron-plate", 20},
+        {"iron-plate", 20},
         {"steel-plate", 10},
-        {"iron-gear-wheel", 10} ]]
-        {"iron-plate", 1}
+        {"iron-gear-wheel", 10},
       },
       result = "dock"
     },
@@ -46,10 +42,9 @@ data:extend(
       enabled = "true",
       ingredients =
       {
-      --[[  {"iron-plate", 20},
+        {"iron-plate", 30},
         {"steel-plate", 10},
-        {"iron-gear-wheel", 10} ]]
-        {"iron-plate", 1}
+        {"iron-gear-wheel", 10},
       },
       result = "oil-rig"
     },

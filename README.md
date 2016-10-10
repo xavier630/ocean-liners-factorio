@@ -26,7 +26,9 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Remove plants in water?
 * New type of self-sufficient offshore pumps (takes accumlators and solar panels in the crafting)
 * All types of pipes over water
-*
+* Change sea-oil collision_mask to avoid ships and then increase collision_box for the map icons
+* Sea-oil, increase min extraction rate from 0.1/sec
+
 
 
 

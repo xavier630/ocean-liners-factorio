@@ -30,6 +30,7 @@ data:extend(
       type = "recipe",
       name = "dock",
       enabled = "true",
+
       ingredients =
       {
       --[[  {"iron-plate", 20},
@@ -51,6 +52,20 @@ data:extend(
         {"iron-plate", 1}
       },
       result = "oil-rig"
+    },
+    {
+      type = "recipe",
+      name = "ocean-power-pole",
+      enabled = "true",
+      ingredients =
+      {
+        {"iron-plate", 50},
+        {"iron-gear-wheel", 10},
+        {"copper-plate", 5},
+      },
+      result = "ocean-power-pole",
+      result_count = 3,
+
     },
 
   })

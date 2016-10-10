@@ -3,16 +3,21 @@ data:extend(
   {
     {
       type = "item-group",
-      name = "oceanliner",
-      icon = "__OceanLiner__/graphics/paddle-steamer-icon.jpg",
+      name = "ocean-liners",
+      icon = "__OceanLiners__/graphics/paddle-steamer-icon.jpg",
       order = "z"
     },
 
     {
       type = "item-subgroup",
-      name = "contents",
-      group = "oceanliner",
-      order = "a",
+      name = "ocean-liners-maritime",
+      group = "ocean-liners",
+      order = "z",
+    },
+
+    {
+    type = "recipe-category",
+    name = "ocean-liners-maritime"
     },
   }
 

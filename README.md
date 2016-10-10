@@ -25,6 +25,8 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Dock + ship textures <br>
 * Oil in Shallow water too?
 * Remove plants in water?
+* New type of self-sufficient offshore pumps (takes accumlators and solar panels in the crafting)
+* 
 
 
 

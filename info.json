@@ -1,9 +1,10 @@
 {
   "name": "OceanLiners",
-  "version": "1.4.0",
+  "version": "0.1.0",
   "factorio_version" : "0.14",
   "title": "Ocean Liners",
   "author": "Xavier Downs",
-  "homepage": "",
-  "description": "Adds Ocean Liners! Sail the Seas and enjoy."
+  "homepage": "https://github.com/xavier630/Ocean-Liners-Factorio",
+  "description": "Adds Ocean Liners! Sail the Seas and enjoy.",
+  "dependencies": ["base >= 0.13.0"]
 }

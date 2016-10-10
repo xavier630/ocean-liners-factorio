@@ -108,7 +108,7 @@ data:extend({
         }
       },
     },
-    energy_usage = "1kW",
+    energy_usage = "75kW",
     mining_speed = 2,
     mining_power = 3,
     resource_searching_radius = 0.49,

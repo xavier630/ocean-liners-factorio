@@ -53,7 +53,7 @@ calc_orientation=function(player, car)
 end
 
  script.on_event(defines.events.on_player_driving_changed_state, function(event)
-   game.players[event.player_index].color = {r=0.1, g=0.1, b=0.9, a=0.8}
+   --game.players[event.player_index].color = {r=0.1, g=0.1, b=0.9, a=0.8}
    local player = game.players[event.player_index]
    --player.surface.print("test printing")
    --player.surface.print(player.name)

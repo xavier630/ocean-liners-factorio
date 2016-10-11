@@ -48,4 +48,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 
 
 #Changelog <br>
-*0.1.1 Fixed issues with decorative shrubs being placed on water
+
+Changelog:
+* 0.1.2 -  Removed git files to significantly reduce size
+* 0.1.1 Fixed issues with decorative shrubs being placed on water

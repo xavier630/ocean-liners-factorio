@@ -45,3 +45,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Put the zip in your mods folder! <br>
 * For Windows:  run -> %appdata% -> .roaming/factorio <br>
 * Ubuntu: ~/.factorio
+
+
+#Changelog <br>
+*0.1.1 Fixed issues with decorative shrubs being placed on water

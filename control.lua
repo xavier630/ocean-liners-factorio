@@ -1,6 +1,4 @@
-require "util"
---require "defines"
---require "defines"
+
 local last_boat
 script.on_init(function()
 
@@ -105,7 +103,7 @@ end
      end
 
  end)]]
- script.on_event(defines.events.on_chunk_generated, function(event) --delete all resources on water except oil
+ script.on_event(defines.events.on_chunk_generated, function(event) --delete all resources and plants on water except oil
    local box = event.area
    local surface = event.surface
    local entities = surface.find_entities_filtered{area = box, type = "resource"}

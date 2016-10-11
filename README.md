@@ -9,8 +9,11 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Docks - Can take inserters, boat stays near, player deposited in same location <br>
 * Sailing Ships - acceleration dependent on Wind <br>
 * Paths between docks. - sounds hard - maybe with invisible rails ;) <br>
-* Quays
+* Quays to moor boats
 * Add Oceans
+* Drifting of boats that aren't moored - to do with wind/tides
+* Can equip a lifejacket to swim to a boat or get out at sea
+
 
 
 #Current TODO <br>

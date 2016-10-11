@@ -87,11 +87,11 @@ end
  end)
  script.on_event(defines.events.on_entity_died, function(event) --Receive shells for killing fish
    if event.entity.name == "fish" then
-     player = game.players[1] --TODO give to the right player
+     player = game.players[1] --TODO give to the right player - will be easier when API is updated so that the event features a player
      player.character.insert{name="cannon-shell", count=8}
    end
- end)
---[[ script.on_event(defines.events.on_player_crafted_item, function(event) --Script to test for entities around the player
+ end) --[[
+ script.on_event(defines.events.on_player_crafted_item, function(event) --Script to test for entities around the player
      local player = game.players[event.player_index]
      local surface = player.surface
      local position = player.position
@@ -101,7 +101,7 @@ end
      local pos4 = position.y + 5
      local entities = surface.find_entities({{pos1, pos2}, {pos3, pos4}})
      for _, entity in pairs(entities) do
-      surface.print(entity.name)
+      surface.print(entity.name .. " " .. entity.type)
      end
 
  end)]]
@@ -109,6 +109,8 @@ end
    local box = event.area
    local surface = event.surface
    local entities = surface.find_entities_filtered{area = box, type = "resource"}
+   local entities2 = surface.find_entities_filtered{area = box, type = "decorative"}
+   for k,v in pairs(entities2) do table.insert(entities, v) end
    for _, i in pairs(entities) do
      local pos = i.position
      local tile = surface.get_tile(pos.x, pos.y)

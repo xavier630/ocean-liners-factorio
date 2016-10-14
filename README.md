@@ -32,8 +32,10 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Change sea-oil collision_mask to avoid ships and then increase collision_box for the map icons
 * Sea-oil, increase min extraction rate from 0.1/sec
 * Separate oil that is too close together
-* Change Car colouring
 * Raise pumpjack power costs
+* Resources with angels spawning on water.
+* Exception with entity changed state event (getting out of a car)
+
 
 
 

@@ -70,7 +70,7 @@ data:extend({
         variation_count = 1
       }
     },
-    map_color = {r=0.8, g=0.1, b=0.8},
+    map_color = {r=0.9098, g=0.6, b=0.8},
     map_grid = false
   },
   {

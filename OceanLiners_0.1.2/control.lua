@@ -1,8 +1,6 @@
 
 local last_boat
-local swimming_speed
 script.on_init(function()
-  swimming_speed = -0.8
 end)
 face_left=function(car)
   car.orientation =  0.75
@@ -77,11 +75,12 @@ end
  end)]]
  script.on_event(defines.events.on_tick, function(event)
   for k, player in pairs(game.players) do
-    pos = player.position
-    tile = player.surface.get_tile(pos.x, pos.y)
-    if (tile.name == "deepwater" or tile.name == "water" ) then
-      player.character_running_speed_modifier = swimming_speed
-      player.character_mining_speed_modifier = swimming_speed
+    local pos = player.position
+    local tile = player.surface.get_tile(pos.x, pos.y)
+    local name = tile.name
+    if (name == "deepwater" or name == "water" or name == "deepwater-green" or name == "water-green" ) then
+      player.character_running_speed_modifier = -0.8
+      player.character_mining_speed_modifier = -0.8
     else
       player.character_running_speed_modifier = 0
       player.character_mining_speed_modifier = 0

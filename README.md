@@ -25,23 +25,16 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Sea oil configurable at new game screen <br>
 * Dock functionality - pulls in ships when player gets out nearby <br>
 * Dock + ship + rig + power pole textures  <br>
-* New type of self-sufficient offshore pumps (takes accumlators and solar panels in the crafting)
-* All types of pipes over water
-* Change sea-oil collision_mask to avoid ships and then increase collision_box for the map icons
-* Sea-oil, increase min extraction rate from 0.1/sec
-* Separate oil that is too close together
-* Raise pumpjack power costs
-* Resources with angels spawning on water.
-* Exception with entity changed state event (getting out of a car)
-* Players can walk on water but have a sailing-boat picture and are slowed - speed affected by wind? Helps to resolve issues with
-  running out of fuel 
-* Check on enter press:
-* 1) In a boat: Place player into a dinghy (potentially works if no collision mask with water) or onto nearest land
-* 2) On land : Look for nearby boats. (5m?) and place players within them? Risky because player may be trying to enter a car and get forced into a boat. Probably better to just give a dinghy when walking onto water.
+* New type of self-sufficient offshore pumps (takes accumlators and solar panels in the crafting)?
+* Change sea-oil collision_mask to avoid ships - Potentially not possible since both ships and this need "ground-tile" collisions
+* Fix resources with angels spawning on water - haven't reproduced yet.
+* Check when getting out of a boat for nearby land and move player there?
 
 
 
-
+#Needed Graphics
+* All item textures and icons
+* Animations for swimming in water
 
 
 #Installation <br>
@@ -54,6 +47,6 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 
 #Changelog <br>
 
-Changelog:
-* 0.1.2 -  Removed git files to significantly reduce size
-* 0.1.1 Fixed issues with decorative shrubs being placed on water
+* 0.1.3 - Increased sea-oil size on map, stopped sea-oil spawning too close together, adding swimming to boats
+* 0.1.2 - Removed git files to significantly reduce size
+* 0.1.1 - Fixed issues with decorative shrubs being placed on water

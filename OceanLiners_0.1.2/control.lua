@@ -79,8 +79,8 @@ end
     local tile = player.surface.get_tile(pos.x, pos.y)
     local name = tile.name
     if (name == "deepwater" or name == "water" or name == "deepwater-green" or name == "water-green" ) then
-      player.character_running_speed_modifier = -0.8
-      player.character_mining_speed_modifier = -0.8
+      player.character_running_speed_modifier = -0.7
+      player.character_mining_speed_modifier = -0.7
     else
       player.character_running_speed_modifier = 0
       player.character_mining_speed_modifier = 0

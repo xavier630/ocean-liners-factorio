@@ -25,6 +25,7 @@ data:extend(
 
 --entity
 require("prototypes.entity.entities")
+require("prototypes.entity.entities2")
 
 --items
 require("prototypes.item.items")

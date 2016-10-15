@@ -105,8 +105,11 @@ end
    local surface = event.surface
    local entities = surface.find_entities_filtered{area = box, type = "resource"}
    local entities2 = surface.find_entities_filtered{area = box, type = "decorative"}
+   local entities3 = surface.find_entities_filtered{area = box, type = "tree"}
    local to_be_destroyed = {}
-   for k,v in pairs(entities2) do table.insert(entities, v) end --merge the two tables.
+   for k,v in pairs(entities2) do table.insert(entities, v) end --merge the tables.
+   for k,v in pairs(entities3) do table.insert(entities, v) end --merge the tables.
+
    for _, i in pairs(entities) do
      -- if (i.valid) -- then only needed when deleting surrounding oil, not the current oil
        local pos = i.position
@@ -114,10 +117,8 @@ end
        if (i.name == "sea-oil") then --Make sure oil isn't too close together
           local area = {{pos.x - 3, pos.y - 3}, {pos.x + 3, pos.y + 3}}
           local neighbours = surface.find_entities_filtered({area=area, name = "sea-oil"})
-          --surface.print(neighbours[1])
 
           for key, j in pairs(neighbours) do
-            surface.print("Neighbour++")
             if (j ~= i) then
               --Can either delete the surround oil or delete this oil.
               i.destroy()

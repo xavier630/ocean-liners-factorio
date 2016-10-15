@@ -1,6 +1,7 @@
-data.raw["tile"]["deepwater"] = nil
+data.raw["tile"]["deepwater"].collision_mask={}
 data.raw["fish"]["fish"] = nil
 data.raw["pipe"]["pipe"] = nil
+data.raw["player"]["player"].collision_mask={"object-layer"}
 
 --data.raw["resource"]["crude-oil"].collision_mask = {"resource-layer", "floor-layer", "item-layer", "object-layer", "ghost-layer"}
 --data.raw["resource"]["crude-oil"].autoplace.coverage = 0.82
@@ -35,15 +36,15 @@ data:extend({
         }
       }
     },
-    collision_box = {{0, 0}, {0, 0}},--{{ -1.4, -1.4}, {1.4, 1.4}},
-    selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
-    collision_mask = {"resource-layer", "floor-layer", "item-layer", "object-layer", "ghost-layer", "ground-tile"},
+    collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},--{{0, 0}, {0, 0}}, --Can either have small map icons or few oil collisions
+    selection_box = {{ -0.5, -0.5}, {0.5, 0.5}}, --Because ground-tile has both cars and oil as a collision_mask
+    collision_mask = {"resource-layer", "floor-layer", "item-layer" , "ghost-layer", "ground-tile"}, --"object-layer"
     autoplace =
     {
       control = "crude-oil",
       sharpness = 0.99,
-      max_probability = 0.055,
-      richness_base = 8000,
+      max_probability = 0.085,
+      richness_base = 10000,
       richness_multiplier = 35000,
       richness_multiplier_distance_bonus = 10,
       coverage = 0.04, -- Cover on average 2% of surface area.
@@ -158,56 +159,7 @@ data:extend({
   },
 
 
-  {
-    type = "tile",
-    name = "deepwater",
-    collision_mask =
-    {
 
-      --"player-layer",
-    },
-    autoplace = water_autoplace_settings(250),
-    layer = 45,
-    variants =
-    {
-      main =
-      {
-        {
-          picture = "__base__/graphics/terrain/deepwater/deepwater1.png",
-          count = 8,
-          size = 1
-        },
-        {
-          picture = "__base__/graphics/terrain/deepwater/deepwater2.png",
-          count = 8,
-          size = 2
-        },
-        {
-          picture = "__base__/graphics/terrain/deepwater/deepwater4.png",
-          count = 6,
-          size = 4
-        }
-      },
-      inner_corner =
-      {
-        picture = "__base__/graphics/terrain/deepwater/deepwater-inner-corner.png",
-        count = 6
-      },
-      outer_corner =
-      {
-        picture = "__base__/graphics/terrain/deepwater/deepwater-outer-corner.png",
-        count = 6
-      },
-      side =
-      {
-        picture = "__base__/graphics/terrain/deepwater/deepwater-side.png",
-        count = 8
-      }
-    },
-    allowed_neighbors = { "water" },
-    map_color={r=0.0941, g=0.2823, b=0.345},
-    ageing=0.0006
-  },
   {
     type = "fish",
     name = "fish",

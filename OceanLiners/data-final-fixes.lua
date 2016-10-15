@@ -164,7 +164,7 @@ data:extend({
     collision_mask =
     {
 
-      "player-layer",
+      --"player-layer",
     },
     autoplace = water_autoplace_settings(250),
     layer = 45,

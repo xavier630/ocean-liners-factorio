@@ -1,7 +1,8 @@
 
 local last_boat
+local swimming_speed
 script.on_init(function()
-
+  swimming_speed = -0.8
 end)
 face_left=function(car)
   car.orientation =  0.75
@@ -75,17 +76,28 @@ end
 
  end)]]
  script.on_event(defines.events.on_tick, function(event)
-  --[[ player = game.players[1]
-   if player.character.vehicle and player.character.vehicle.name == "paddle-steamer" then
-     last_boat = player.character.vehicle
-   end]]
+  for k, player in pairs(game.players) do
+    pos = player.position
+    tile = player.surface.get_tile(pos.x, pos.y)
+    if (tile.name == "deepwater" or tile.name == "water" ) then
+      player.character_running_speed_modifier = swimming_speed
+      player.character_mining_speed_modifier = swimming_speed
+    else
+      player.character_running_speed_modifier = 0
+      player.character_mining_speed_modifier = 0
+    end
+  end
  end)
+
+
  script.on_event(defines.events.on_entity_died, function(event) --Receive shells for killing fish
    if event.entity.name == "fish" then
      player = game.players[1] --TODO give to the right player - will be easier when API is updated so that the event features a player
-     player.character.insert{name="cannon-shell", count=8}
+     player.character.insert{name="cannon-shell", count=5}
    end
  end)
+
+
  script.on_event(defines.events.on_player_crafted_item, function(event) --Script to test for entities around the player
      local player = game.players[event.player_index]
      local surface = player.surface

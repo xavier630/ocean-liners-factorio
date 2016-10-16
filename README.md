@@ -29,6 +29,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Change sea-oil collision_mask to avoid ships - Potentially not possible since both ships and this need "ground-tile" collisions
 * Fix resources with angels spawning on water - haven't reproduced yet.
 * Check when getting out of a boat for nearby land and move player there?
+* No water collisions with buildings except mod buildings and rails - add object layer to collision mask?
 
 
 

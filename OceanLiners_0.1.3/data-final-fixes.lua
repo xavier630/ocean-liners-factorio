@@ -1,9 +1,10 @@
 --The place where vanilla entities are overridden.
 data.raw["tile"]["deepwater"].collision_mask={}
+data.raw["tile"]["water"].collision_mask={}
 data.raw["fish"]["fish"] = nil
 local pipe = data.raw["pipe"]
 local pipe_to_ground = data.raw["pipe-to-ground"]
-data.raw["player"]["player"].collision_mask={"object-layer"}
+data.raw["player"]["player"].collision_mask={"player-layer"}
 
 for k,v in pairs(pipe) do --collision changes apply to all pipes.
   v.collision_mask={"object-layer"}

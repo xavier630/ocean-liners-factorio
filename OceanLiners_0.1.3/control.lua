@@ -107,8 +107,10 @@ end
      local pos4 = position.y + 5
      local entities = surface.find_entities({{pos1, pos2}, {pos3, pos4}})
      for _, entity in pairs(entities) do
-      surface.print(entity.name .. " " .. entity.type)
+      --surface.print(entity.name .. " " .. entity.type)
      end
+     surface.print(surface.get_tile(pos1, pos2).name)
+
 
  end)
  script.on_event(defines.events.on_chunk_generated, function(event) --delete all resources and plants on water except oil
@@ -138,7 +140,7 @@ end
             end
           end
        else
-         if (tile.name == "deepwater") then -- Destroy if not crude oil and over the water
+         if (tile.name == "deepwater" or tile.name == "water" or tile.name == "deepwater-green" or tile.name == "water-green") then -- Destroy if not crude oil and over the water
           i.destroy()
          end
        end --end if

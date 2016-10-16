@@ -48,7 +48,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 #Changelog <br>
 
 * 0.1.4 - Fixed issue with player collisions 
-* 0.1.3 - Increased sea-oil size on map, stopped sea-oil spawning too close together, adding swimming 
+* 0.1.3 - Increased sea-oil size on map, stopped sea-oil spawning too close together, adding swimming to the mod, numerous other small fixes.
 * 0.1.2 - Removed git files to significantly reduce size
 * 0.1.1 - Fixed issues with decorative shrubs being placed on water
 

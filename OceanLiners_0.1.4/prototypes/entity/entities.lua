@@ -22,7 +22,7 @@ data:extend({
             decrease = 30
           }
         },
-        collision_mask = {"ground-tile"},
+        collision_mask = {"ground-tile", "object-layer"},
         collision_box = {{-0.2, -0.4}, {0.2, 0.4}},
         selection_box = {{-0.7, -1}, {0.7, 1}},
         effectivity = 0.5,
@@ -285,7 +285,7 @@ data:extend({
             decrease = 30
           }
         },
-        collision_mask = {"ground-tile"},
+        collision_mask = {"ground-tile", "object-layer"},
         collision_box = {{-0.2, -0.4}, {0.2, 0.4}},
         selection_box = {{-0.7, -1}, {0.7, 1}},
         effectivity = 0.5,
@@ -665,7 +665,7 @@ data:extend({
         priority = "extra-high-no-scale"
       },
     },
-  
+
 
 
 

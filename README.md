@@ -55,5 +55,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * 0.1.2 - Removed git files to significantly reduce size
 * 0.1.1 - Fixed issues with decorative shrubs being placed on water
 
-#Personal
-Working on the mod
+#Tradeoffs <br>
+
+* In order to implement swimming, I had to remove player collisions with water. Unfortunately, cars rely on sharing player collisions with water to stop one from driving into water. So I've had to add water collisions to cars. Okay this one was nearly a trade-off but I found a workaround. It's hard sometimes when you're completely restricted by the game's API.
+

@@ -29,10 +29,8 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Change sea-oil collision_mask to avoid ships - Potentially not possible since both ships and this need "ground-tile" collisions
 * Fix resources with angels spawning on water - haven't reproduced yet.
 * Check when getting out of a boat for nearby land and move player there?
-* No water collisions with buildings except mod buildings and rails - add object layer to collision mask?
-* Fix cars driving onto water - will need to add the object-collision mask to water
 * Increase boat speeds to be more in line with cars
-
+* Deep water - way to use water_tile in its mask and still spawn oil.
 
 
 #Needed Graphics
@@ -50,15 +48,15 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 
 #Changelog <br>
 
-* 0.1.5 - Fixed issues with cars being able to drive onto water. Made rails placable over water.
+* 0.1.5 - Fixed issues with cars being able to drive onto water. Made rails placable over water. Fixed issues with biter attacks across ocean and added it as a config option.
 * 0.1.4 - Fixed issue with player collisions 
 * 0.1.3 - Increased sea-oil size on map, stopped sea-oil spawning too close together, adding swimming to the mod, numerous other small fixes.
 * 0.1.2 - Removed git files to significantly reduce size
 * 0.1.1 - Fixed issues with decorative shrubs being placed on water
 
-#Tradeoffs <br>
+#Issues <br>
 
-* In order to implement swimming, the only viable collision mask to add to water is water_tile. Unfortunately, sea-oil won't spawn on a water_tile. Therefore, I've removed water_tile from deepwater's collision_mask. This means that deep water has interesting properties for now, like cars can be placed on it, etc.
+* Deep sea isn't formally a water tile at the moment so that resources (sea oil) can spawn on it. This should be unnoticable in general, but lets you do some odd things like placing a car onto it, etc.
 
 #Questions <br>
 
@@ -67,5 +65,5 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 
 #To Check <br>
 
-* Fish aren't walking on land with the collision changes.
+* 
 

@@ -22,6 +22,11 @@ data:extend(
   }
 
 )
+--config
+require("config")
+if not (biters_cross_water) then
+  require("lib.biters-cross-water")
+end
 
 --entity
 require("prototypes.entity.entities")

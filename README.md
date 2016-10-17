@@ -50,6 +50,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 
 #Changelog <br>
 
+* 0.1.5 - Fixed issues with cars being able to drive onto water. Made rails placable over water.
 * 0.1.4 - Fixed issue with player collisions 
 * 0.1.3 - Increased sea-oil size on map, stopped sea-oil spawning too close together, adding swimming to the mod, numerous other small fixes.
 * 0.1.2 - Removed git files to significantly reduce size
@@ -57,5 +58,14 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 
 #Tradeoffs <br>
 
-* In order to implement swimming, I had to remove player collisions with water. Unfortunately, cars rely on sharing player collisions with water to stop one from driving into water. So I've had to add water collisions to cars. Okay this one was nearly a trade-off but I found a workaround. It's hard sometimes when you're completely restricted by the game's API.
+* In order to implement swimming, the only viable collision mask to add to water is water_tile. Unfortunately, sea-oil won't spawn on a water_tile. Therefore, I've removed water_tile from deepwater's collision_mask. This means that deep water has interesting properties for now, like cars can be placed on it, etc.
+
+#Questions <br>
+
+* Should oil rigs be placable only over the ocean?
+* Should players be able to walk through all kinds of pipes? Would be very convenient when at sea and driving across pipes.
+
+#To Check <br>
+
+* Fish aren't walking on land with the collision changes.
 

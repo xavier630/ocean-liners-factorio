@@ -1,15 +1,17 @@
 --The place where vanilla entities are overridden -- define boats here because cars get overridden in this file.
-data.raw["tile"]["deepwater"].collision_mask={ "item-layer", "water-tile"}
+data.raw["tile"]["deepwater"].collision_mask={ "item-layer"}
 data.raw["tile"]["water"].collision_mask={ "item-layer", "water-tile"}
---data.raw["tile"]["deepwater-green"].collision_mask={"object-layer"}
---data.raw["tile"]["water-green"].collision_mask={"object-layer"}
+data.raw["tile"]["deepwater-green"].collision_mask={"item-layer"}
+data.raw["tile"]["water-green"].collision_mask={"item-layer", "water-tile"}
 data.raw["curved-rail"]["curved-rail"].collision_mask={"object-layer", "not-colliding-with-itself"}
 data.raw["straight-rail"]["straight-rail"].collision_mask={"object-layer", "not-colliding-with-itself"}
 data.raw["fish"]["fish"] = nil
-data.raw["player"]["player"].collision_mask={"player-layer", "ghost-layer"}
+data.raw["player"]["player"].collision_mask={"player-layer"}
 local pipe = data.raw["pipe"]
 local pipe_to_ground = data.raw["pipe-to-ground"]
 local car = data.raw["car"]
+local biters = data.raw["unit-spawner"] -- make sure biter lairs don't spawn on water.
+
 
 for k,v in pairs(pipe) do --collision changes apply to all pipes.
   v.collision_mask={"object-layer", "item-layer"}
@@ -20,8 +22,12 @@ end
 for k,v in pairs(car) do --collision changes apply to all pipes.
   v.collision_mask={"water-tile", "player-layer"}--"ghost-layer"}
 end
+for k,v in pairs(biters) do --collision changes apply to all pipes.
+  v.collision_mask={"water-tile", "player-layer"}
+end
 
 
+--KEEP ALL BOATS HERE - it's important that the boats are loaded after the changes to cars above
 data:extend({
 
   {
@@ -81,7 +87,7 @@ data:extend({
         collision_mask = {"ground-tile", "object-layer"},
         collision_box = {{-0.2, -0.4}, {0.2, 0.4}},
         selection_box = {{-0.7, -1}, {0.7, 1}},
-        effectivity = 0.5,
+        effectivity = 0.8,
         braking_power = "200kW",
         burner =
         {
@@ -324,7 +330,7 @@ data:extend({
         icon = "__base__/graphics/icons/car.png",
         flags = {"pushable", "placeable-neutral", "player-creation", "placeable-off-grid"},
         minable = {mining_time = 0.5, result = "paddle-steamer"},
-        max_health = 200,
+        max_health = 400,
         corpse = "medium-remnants",
         dying_explosion = "medium-explosion",
         energy_per_hit_point = 1,
@@ -344,7 +350,7 @@ data:extend({
         collision_mask = {"ground-tile", "object-layer"},
         collision_box = {{-0.2, -0.4}, {0.2, 0.4}},
         selection_box = {{-0.7, -1}, {0.7, 1}},
-        effectivity = 0.5,
+        effectivity = 0.8,
         braking_power = "200kW",
         burner =
         {
@@ -561,6 +567,7 @@ data:extend({
         guns = { "vehicle-machine-gun" },
         inventory_size = 115
       },
+
 
 
 

@@ -97,7 +97,7 @@ end
  end)
 
 
- script.on_event(defines.events.on_player_crafted_item, function(event) --Script to test for entities around the player
+ --[[script.on_event(defines.events.on_player_crafted_item, function(event) --Script to test for entities around the player
      local player = game.players[event.player_index]
      local surface = player.surface
      local position = player.position
@@ -112,16 +112,18 @@ end
      surface.print(surface.get_tile(pos1, pos2).name)
 
 
- end)
+ end)]]
  script.on_event(defines.events.on_chunk_generated, function(event) --delete all resources and plants on water except oil
    local box = event.area
    local surface = event.surface
    local entities = surface.find_entities_filtered{area = box, type = "resource"}
    local entities2 = surface.find_entities_filtered{area = box, type = "decorative"}
    local entities3 = surface.find_entities_filtered{area = box, type = "tree"}
+   local entities4 = surface.find_entities_filtered{area = box, type = "unit-spawner"}
    local to_be_destroyed = {}
    for k,v in pairs(entities2) do table.insert(entities, v) end --merge the tables.
    for k,v in pairs(entities3) do table.insert(entities, v) end --merge the tables.
+   for k,v in pairs(entities4) do table.insert(entities, v) end --merge the tables.
 
    for _, i in pairs(entities) do
      -- if (i.valid) -- then only needed when deleting surrounding oil, not the current oil

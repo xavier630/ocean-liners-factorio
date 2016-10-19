@@ -51,6 +51,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 
 #Changelog <br>
 
+* 0.1.7 - Fixed issues with cars not driving through gates, added a sailing raft, made oil-rigs only placable on the ocean, fixed issues with pipes
 * 0.1.6 - Fixed issues with disconnected players in multiplayer. Stopped docks producing oil. Added config for swimming.
 * 0.1.5 - Fixed issues with cars being able to drive onto water. Made rails placable over water. Fixed issues with biter attacks across ocean and added it as a config option.
 * 0.1.4 - Fixed issue with player collisions 
@@ -61,6 +62,8 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 #Issues <br>
 
 * Deep sea isn't formally a water tile at the moment so that resources (sea oil) can spawn on it. This should be unnoticable in general, but lets you do some odd things like placing a car onto it, etc.
+* Biters can't pass ghost entities. I had to do this to allow gates to stop them, but let the player through. Shouldn't be noticable unless you build a ghost wall
+
 
 #Questions <br>
 

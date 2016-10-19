@@ -12,7 +12,7 @@ data:extend({
             collision_box = {{-0.6, -0.3}, {0.6, 0.3}},
             selection_box = {{-1, -1.49}, {1, 0.49}},
             pumping_speed = 1,
-            fluid = "crude-oil",
+            fluid = "water",
             fluid_box =
               {
                 base_area = 5,

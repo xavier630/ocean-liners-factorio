@@ -105,7 +105,7 @@ data:extend({
           }
         },
         consumption = "100kW",
-        friction = 2e-3,
+        friction = 8e-4,
         light =
         {
           {
@@ -368,7 +368,7 @@ data:extend({
           }
         },
         consumption = "100kW",
-        friction = 2e-3,
+        friction = 8e-4,
         light =
         {
           {

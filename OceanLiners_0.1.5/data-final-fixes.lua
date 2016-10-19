@@ -6,7 +6,6 @@ data.raw["tile"]["water-green"].collision_mask={"item-layer", "water-tile"}
 data.raw["curved-rail"]["curved-rail"].collision_mask={"object-layer", "not-colliding-with-itself"}
 data.raw["straight-rail"]["straight-rail"].collision_mask={"object-layer", "not-colliding-with-itself"}
 data.raw["fish"]["fish"] = nil
-data.raw["player"]["player"].collision_mask={"player-layer"}
 local pipe = data.raw["pipe"]
 local pipe_to_ground = data.raw["pipe-to-ground"]
 local car = data.raw["car"]

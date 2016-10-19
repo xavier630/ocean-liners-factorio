@@ -119,7 +119,6 @@ end
         local wind_speed = player.surface.wind_speed * 15
         local wind_direction = player.surface.wind_orientation
         local boat_direction = player.vehicle.orientation
-        player.surface.print(wind_direction)
         if (boat_direction > wind_direction) then
            direction_difference = (boat_direction - wind_direction)
         else
@@ -165,8 +164,8 @@ end
  end)
 
 
- --[[script.on_event(defines.events.on_player_crafted_item, function(event) --Script to test for entities around the player
-     local player = game.players[event.player_index]
+ --script.on_event(defines.events.on_player_crafted_item, function(event) --Script to test for entities around the player
+     --[[local player = game.players[event.player_index]
      local surface = player.surface
      local position = player.position
      local pos1 = position.x - 5
@@ -177,10 +176,12 @@ end
      for _, entity in pairs(entities) do
       --surface.print(entity.name .. " " .. entity.type)
      end
-     surface.print(surface.get_tile(pos1, pos2).name)
+     surface.print(surface.get_tile(pos1, pos2).name)]]
+     --local item = event.itemstack
+     --game.players[event.player_index].surface.print(data.raw["gate"]["gate"].collision_mask)
 
 
- end)]]
+ --end)
  script.on_event(defines.events.on_chunk_generated, function(event) --delete all resources and plants on water except oil
    local box = event.area
    local surface = event.surface

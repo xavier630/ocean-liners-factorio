@@ -1,7 +1,7 @@
 
 data:extend(
   {
-    {
+    { --Item groups are tabs in the recipe menu, subgroups are rows within the tab.
       type = "item-group",
       name = "ocean-liners",
       icon = "__OceanLiners__/graphics/paddle-steamer-icon.jpg",
@@ -10,15 +10,18 @@ data:extend(
 
     {
       type = "item-subgroup",
-      name = "ocean-liners-maritime",
+      name = "ocean-liners-boats",
       group = "ocean-liners",
-      order = "z",
+      order = "b",
+    },
+    {
+      type = "item-subgroup",
+      name = "ocean-liners-infrastructure",
+      group = "ocean-liners",
+      order = "a",
     },
 
-    {
-    type = "recipe-category",
-    name = "ocean-liners-maritime"
-    },
+
   }
 
 )

@@ -31,6 +31,10 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Check when getting out of a boat for nearby land and move player there?
 * Increase boat speeds to be more in line with cars
 * Deep water - way to use water_tile in its mask and still spawn oil.
+* Config option for swimming, config for docks pumping oil? Or remove.
+* Fix: pipes can't be mined when placed over ore, can be placed in entities maybe.
+* Really cheap yacht, costs a bit of wood and some iron.
+* Ironclads and paddle steamers cost electric engines
 
 
 #Needed Graphics

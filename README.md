@@ -10,31 +10,30 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Sailing Ships - acceleration dependent on Wind <br>
 * Paths between docks. - sounds hard - maybe with invisible rails ;) <br>
 * Quays to moor boats
-* Add Oceans
+* Add Oceans + large interconnected lakes
 * Drifting of boats that aren't moored - to do with wind/tides
 * Can equip a lifejacket to swim to a boat or get out at sea
+* New types of fish eg sharks
+* Whirlpools
 
 
 
 #Current TODO <br>
 
-* Make fish shootable - maybe need to overwrite them in entity or something like that - otherwise have the selector in lua
 * Faster Ironclad cannon shots
-* Add separate oil pump (separate to the dock which pumps oil) and add spouts <br>
 * Turret Parallax <br>
-* Sea oil configurable at new game screen <br>
+* Sea oil configurable at new game screen - currently uses regular oil config.
 * Dock functionality - pulls in ships when player gets out nearby <br>
 * Dock + ship + rig + power pole textures  <br>
 * New type of self-sufficient offshore pumps (takes accumlators and solar panels in the crafting)?
 * Change sea-oil collision_mask to avoid ships - Potentially not possible since both ships and this need "ground-tile" collisions
 * Fix resources with angels spawning on water - haven't reproduced yet.
 * Check when getting out of a boat for nearby land and move player there?
-* Increase boat speeds to be more in line with cars
 * Deep water - way to use water_tile in its mask and still spawn oil.
-* Config option for swimming, config for docks pumping oil? Or remove.
-* Fix: pipes can't be mined when placed over ore, can be placed in entities maybe.
 * Really cheap yacht, costs a bit of wood and some iron.
 * Ironclads and paddle steamers cost electric engines
+* Life-vest graphics when swimming
+* Move entities to their own files, eg oil-pumps.lua with the current oil-rig and the new self-sufficient pump.
 
 
 #Needed Graphics
@@ -52,6 +51,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 
 #Changelog <br>
 
+* 0.1.6 - Fixed issues with disconnected players in multiplayer. Stopped docks producing oil. Added config for swimming.
 * 0.1.5 - Fixed issues with cars being able to drive onto water. Made rails placable over water. Fixed issues with biter attacks across ocean and added it as a config option.
 * 0.1.4 - Fixed issue with player collisions 
 * 0.1.3 - Increased sea-oil size on map, stopped sea-oil spawning too close together, adding swimming to the mod, numerous other small fixes.

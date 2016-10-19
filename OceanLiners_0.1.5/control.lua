@@ -1,26 +1,44 @@
-
-local last_boat
+--On adding a boat make sure to change the isBoat function
 script.on_init(function()
+
 end)
-face_left=function(car)
+
+face_left = function(car)
   car.orientation =  0.75
   return true
 end
-face_right=function(car)
+face_right = function(car)
   car.orientation =  0.25
   return true
 end
-face_up=function(car)
+face_up = function(car)
   car.orientation =  0
   return true
 end
-face_down=function(car)
+face_down = function(car)
   car.orientation =  0.5
   return true
 end
+--takes an entity name
+is_boat = function(name)
+  if (name == "ironclad" or name == "paddle-steamer") then
+    return true
+  else
+    return false
+  end
+end
+--takes a tile name
+is_water_tile = function(name)
+  if (name == "deepwater" or name == "water" or name == "deepwater-green" or name == "water-green") then
+    return true
+  else
+    return false
+  end
+end
 
 
-calc_orientation=function(player, car)
+
+calc_orientation = function(player, car)
   Cx = car.position.x
   Cy = car.position.y
   Px = player.position.x
@@ -75,15 +93,17 @@ end
  end)]]
  script.on_event(defines.events.on_tick, function(event)
   for k, player in pairs(game.players) do
-    local pos = player.position
-    local tile = player.surface.get_tile(pos.x, pos.y)
-    local name = tile.name
-    if (name == "deepwater" or name == "water" or name == "deepwater-green" or name == "water-green" ) then
-      player.character_running_speed_modifier = -0.7
-      player.character_mining_speed_modifier = -0.7
-    else
-      player.character_running_speed_modifier = 0
-      player.character_mining_speed_modifier = 0
+    if (player.connected and player.character) then
+      local pos = player.position
+      local tile = player.surface.get_tile(pos.x, pos.y)
+      local name = tile.name
+      if (is_water_tile(name)) then
+        player.character_running_speed_modifier = -0.7
+        player.character_mining_speed_modifier = -0.7
+      else
+        player.character_running_speed_modifier = 0
+        player.character_mining_speed_modifier = 0
+      end
     end
   end
  end)
@@ -91,8 +111,17 @@ end
 
  script.on_event(defines.events.on_entity_died, function(event) --Receive shells for killing fish
    if event.entity.name == "fish" then
-     player = game.players[1] --TODO give to the right player - will be easier when API is updated so that the event features a player
-     player.character.insert{name="cannon-shell", count=5}
+     --player = game.players[1] --TODO Give ammo to the player who killed the fish
+     --player.character.insert{name="cannon-shell", count=5}
+
+     local players = game.players --undo any damage caused by fish ;)
+     for k,v in pairs(players) do
+       local vehicle = v.vehicle
+       if (vehicle ~= nil and is_boat(vehicle.name)) then --TODO if type = boat. Can't do types yet. Damn it. Have to hard code every boat?
+         vehicle.health = vehicle.health + 1
+         --v.surface.print("fish killed")
+       end
+     end
    end
  end)
 
@@ -142,7 +171,7 @@ end
             end
           end
        else
-         if (tile.name == "deepwater" or tile.name == "water" or tile.name == "deepwater-green" or tile.name == "water-green") then -- Destroy if not crude oil and over the water
+         if (is_water_tile(tile.name)) then -- Destroy if not crude oil and over the water
           i.destroy()
          end
        end --end if

@@ -8,6 +8,7 @@ data:extend(
       {
         {"iron-plate", 10},
         {"iron-gear-wheel", 5},
+        {"engine-unit", 2},
       },
       result = "paddle-steamer"
     },
@@ -17,9 +18,11 @@ data:extend(
       enabled = "true",
       ingredients =
       {
-        {"iron-plate", 30},
+        {"iron-plate", 10},
         {"steel-plate", 10},
-        {"iron-gear-wheel", 30},
+        {"iron-gear-wheel", 15},
+        {"engine-unit", 3},
+
       },
       result = "ironclad"
     },

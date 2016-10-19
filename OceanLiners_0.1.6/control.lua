@@ -21,7 +21,15 @@ face_down = function(car)
 end
 --takes an entity name
 is_boat = function(name)
-  if (name == "ironclad" or name == "paddle-steamer") then
+  if (name == "ironclad" or name == "paddle-steamer" or name == "raft") then
+    return true
+  else
+    return false
+  end
+end
+--takes an entity name
+is_sailing_boat = function(name)
+  if (name == "raft") then
     return true
   else
     return false
@@ -93,8 +101,9 @@ end
  end)]]
  script.on_event(defines.events.on_tick, function(event)
   for k, player in pairs(game.players) do
-    if (player.connected and player.character) then
-      local pos = player.position
+    if (player.connected and player.character) then --for all active players
+
+      local pos = player.position                   --Check for swimming
       local tile = player.surface.get_tile(pos.x, pos.y)
       local name = tile.name
       if (is_water_tile(name)) then
@@ -104,6 +113,36 @@ end
         player.character_running_speed_modifier = 0
         player.character_mining_speed_modifier = 0
       end
+
+      if (player.driving and is_sailing_boat(player.vehicle.name)) then--Check for sailing boats
+
+        local wind_speed = player.surface.wind_speed * 15
+        local wind_direction = player.surface.wind_orientation
+        local boat_direction = player.vehicle.orientation
+        player.surface.print(wind_direction)
+        if (boat_direction > wind_direction) then
+           direction_difference = (boat_direction - wind_direction)
+        else
+          direction_difference = (wind_direction - boat_direction)
+        end
+        if (direction_difference < 0.3) then --Look at how far apart in a circle the two directions are (a full circle is one). If closer than a quarter-circle, increase speed
+          if (wind_speed > player.vehicle.speed) then
+            if (direction_difference < 0.15) then
+              player.vehicle.speed = ((wind_speed - player.vehicle.speed) / 2) --increase speed by a fraction of the difference between player speed and wind speed
+            elseif (direction_difference < 0.20) then
+              player.vehicle.speed = ((wind_speed - player.vehicle.speed) / 4)
+            elseif (direction_difference < 0.30) then
+              player.vehicle.speed = ((wind_speed - player.vehicle.speed) / 8)
+            end
+          end
+        else
+          if (player.vehicle.speed > 0.001) then
+            player.vehicle.speed = player.vehicle.speed - 0.0001
+          end
+        end
+      end --end sailing boat checks
+
+
     end
   end
  end)

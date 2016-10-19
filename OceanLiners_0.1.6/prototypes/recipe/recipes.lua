@@ -28,6 +28,16 @@ data:extend(
     },
     {
       type = "recipe",
+      name = "raft",
+      enabled = "true",
+      ingredients =
+      {
+        {"wood", 15},
+      },
+      result = "raft"
+    },
+    {
+      type = "recipe",
       name = "dock",
       enabled = "true",
 
@@ -63,6 +73,7 @@ data:extend(
       },
       result = "ocean-power-pole",
       result_count = 3,
+      description = "Very powerful power poles. Can only be placed over water."
 
     },
 

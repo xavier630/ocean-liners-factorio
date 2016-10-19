@@ -22,6 +22,16 @@ data:extend(
     },
     {
       type = "item",
+      name = "raft",
+      icon = "__OceanLiners__/graphics/paddle-steamer-icon.jpg",
+      flags = {"goes-to-quickbar"},
+      subgroup = "ocean-liners-maritime",
+      order = "a[power]-h[ocean-liner]-z",
+      place_result = "raft",
+      stack_size = 50
+    },
+    {
+      type = "item",
       name = "dock",
       icon = "__OceanLiners__/graphics/paddle-steamer-icon.jpg",
       subgroup = "ocean-liners-maritime",
@@ -51,4 +61,5 @@ data:extend(
       place_result = "ocean-power-pole",
       stack_size = 50
     },
+
   })

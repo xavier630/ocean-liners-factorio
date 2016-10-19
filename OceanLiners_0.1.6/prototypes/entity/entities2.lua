@@ -67,7 +67,7 @@ data:extend({
         name = "oil-rig",
         collision_mask =
         {
-
+          "ground-tile"
         },
         icon = "__base__/graphics/icons/pumpjack.png",
         flags = {"placeable-neutral", "player-creation"},

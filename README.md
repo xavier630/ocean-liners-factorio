@@ -35,6 +35,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Life-vest graphics when swimming
 * Move entities to their own files, eg oil-pumps.lua with the current oil-rig and the new self-sufficient pump.
 * Check pipe collision masks
+* Inventory Groups for items.
 
 
 #Needed Graphics
@@ -52,9 +53,9 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 
 #Changelog <br>
 
-* 0.1.7 - Fixed issues with cars not driving through gates, added a sailing raft, made oil-rigs only placable on the ocean, fixed issues with pipes
+* 0.1.7 - Fixed issues with cars not driving through gates, added a sailing raft, made oil-rigs only place-able on the ocean, tidied up recipes and added descriptions
 * 0.1.6 - Fixed issues with disconnected players in multiplayer. Stopped docks producing oil. Added config for swimming.
-* 0.1.5 - Fixed issues with cars being able to drive onto water. Made rails placable over water. Fixed issues with biter attacks across ocean and added it as a config option.
+* 0.1.5 - Fixed issues with cars being able to drive onto water. Made rails place-able over water. Fixed issues with biter attacks across ocean and added it as a config option.
 * 0.1.4 - Fixed issue with player collisions 
 * 0.1.3 - Increased sea-oil size on map, stopped sea-oil spawning too close together, adding swimming to the mod, numerous other small fixes.
 * 0.1.2 - Removed git files to significantly reduce size

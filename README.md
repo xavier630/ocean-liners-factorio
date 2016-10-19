@@ -34,6 +34,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Ironclads and paddle steamers cost electric engines
 * Life-vest graphics when swimming
 * Move entities to their own files, eg oil-pumps.lua with the current oil-rig and the new self-sufficient pump.
+* Check pipe collision masks
 
 
 #Needed Graphics

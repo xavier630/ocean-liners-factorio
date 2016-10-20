@@ -53,6 +53,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 
 #Changelog <br>
 
+* 0.1.8 - Breaking a raft now correctly gives a raft. Pipes once again can be placed over water.
 * 0.1.7 - Fixed issues with cars not driving through gates, added a sailing raft, made oil-rigs only place-able on the ocean, tidied up recipes, added descriptions
 * 0.1.6 - Fixed issues with disconnected players in multiplayer. Stopped docks producing oil. Added config for swimming
 * 0.1.5 - Fixed issues with cars being able to drive onto water. Made rails place-able over water. Fixed issues with biter attacks across ocean and added it as a config option

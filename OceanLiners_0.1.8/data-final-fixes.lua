@@ -13,10 +13,10 @@ local biter = data.raw["unit-spawner"] -- make sure biter lairs don't spawn on w
 
 
 for k,v in pairs(pipe) do --collision changes apply to all pipes.
-  v.collision_mask={"object-layer", "item-layer"}
+  v.collision_mask={"object-layer"}
 end
 for k,v in pairs(pipe_to_ground) do --collision changes apply to all pipes.
-  v.collision_mask={"object-layer" , "item-layer"}
+  v.collision_mask={"object-layer"}
 end
 for k,v in pairs(car) do
   v.collision_mask={"player-layer", "ghost-layer"} --ghost layer here to work with water. Can't do water-tile because then can't pass through gates.
@@ -572,7 +572,7 @@ data:extend({
           name = "raft",
           icon = "__base__/graphics/icons/car.png",
           flags = {"pushable", "placeable-neutral", "player-creation", "placeable-off-grid"},
-          minable = {mining_time = 0.5, result = "paddle-steamer"},
+          minable = {mining_time = 0.5, result = "raft"},
           max_health = 50,
           corpse = "medium-remnants",
           dying_explosion = "medium-explosion",

@@ -15,6 +15,15 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Can equip a lifejacket to swim to a boat or get out at sea
 * New types of fish eg sharks
 * Whirlpools
+* Separate config mod
+*
+*
+*Very soon:
+*Dynamite - ask to use landfill's, add a config option too
+*Buoys - These can be rotated and have an arrow associated with them. When a ship reaches them, it's orientation will be changed to face the direction of the arrow and it will accelerate . Shouldn't work with sailing boats. Need to burn fuel though...
+*Stopping buoys - When a ship hits one of these it will face the direction of the arrow and stop. Can be started again with a circuit network? Ships need to remember their last buoy and not get stopped by it so that they can leave again
+*Diagonal Buoys and stopping buoys.
+*Unloading stations? Ship goes in one arrow, slowly unloaded, out another side? Can you just put a stopping buoy by the shore and unload from that?
 
 
 
@@ -34,8 +43,10 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Ironclads and paddle steamers cost electric engines
 * Life-vest graphics when swimming
 * Move entities to their own files, eg oil-pumps.lua with the current oil-rig and the new self-sufficient pump.
-* Check pipe collision masks
-* Inventory Groups for items.
+* Check pipe collision masks with Squakthrough
+* Biter bases spawning with RSO, No oil with RSO
+* Separate Mod that just offers swimming
+* Tanker ships based on railtanker - could fill from an ocean tank.
 
 
 #Needed Graphics

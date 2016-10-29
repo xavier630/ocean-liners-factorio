@@ -1,36 +1,15 @@
+--Menus now arranged in recipes.lua
 
-data:extend(
-  {
-    { --Item groups are tabs in the recipe menu, subgroups are rows within the tab.
-      type = "item-group",
-      name = "ocean-liners",
-      icon = "__OceanLiners__/graphics/paddle-steamer-icon.jpg",
-      order = "z"
-    },
-
-    {
-      type = "item-subgroup",
-      name = "ocean-liners-boats",
-      group = "ocean-liners",
-      order = "b",
-    },
-    {
-      type = "item-subgroup",
-      name = "ocean-liners-infrastructure",
-      group = "ocean-liners",
-      order = "a",
-    },
-
-
-  }
-
-)
 --config
 require("config-code")
 
 --entity
 require("prototypes.entity.entities")
-require("prototypes.entity.entities2")
+require("prototypes.entity.sea-oil")
+require("prototypes.entity.oil-rig")
+require("prototypes.entity.ocean-power-pole")
+require("prototypes.entity.command-tiles")
+
 
 --items
 require("prototypes.item.items")

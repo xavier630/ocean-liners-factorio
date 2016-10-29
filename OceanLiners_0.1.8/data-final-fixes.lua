@@ -9,7 +9,7 @@ data.raw["fish"]["fish"] = nil
 local pipe = data.raw["pipe"]
 local pipe_to_ground = data.raw["pipe-to-ground"]
 local car = data.raw["car"]
-local biter = data.raw["unit-spawner"] -- make sure biter lairs don't spawn on water.
+local biter = data.raw["unit-spawner"]
 
 
 for k,v in pairs(pipe) do --collision changes apply to all pipes.
@@ -22,7 +22,7 @@ for k,v in pairs(car) do
   v.collision_mask={"player-layer", "ghost-layer"} --ghost layer here to work with water. Can't do water-tile because then can't pass through gates.
 end --I wish the game would allow custom collision masks
 for k,v in pairs(biter) do
-  v.collision_mask={"water-tile", "player-layer"} --only the spawners, not the bugs
+  v.collision_mask={"water-tile", "player-layer"} --only the spawners, not the bugs. -- make sure biter lairs don't spawn on shallow water.
 end
 
 

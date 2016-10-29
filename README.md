@@ -16,20 +16,20 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * New types of fish eg sharks
 * Whirlpools
 * Separate config mod
-*
-*
-*Very soon:
-*Dynamite - ask to use landfill's, add a config option too
+* Amphibious car that transforms into a boat when driving onto water (Can drive on land and water)
+*Dynamite -  Potentially ask RSeding, add a config option too
 *Buoys - These can be rotated and have an arrow associated with them. When a ship reaches them, it's orientation will be changed to face the direction of the arrow and it will accelerate . Shouldn't work with sailing boats. Need to burn fuel though...
 *Stopping buoys - When a ship hits one of these it will face the direction of the arrow and stop. Can be started again with a circuit network? Ships need to remember their last buoy and not get stopped by it so that they can leave again
 *Diagonal Buoys and stopping buoys.
 *Unloading stations? Ship goes in one arrow, slowly unloaded, out another side? Can you just put a stopping buoy by the shore and unload from that?
+*Separate pipes so that I don't mess with vanilla ones. Could build out of vanilla ones, but have perks: placable over water, higher throughput, player can go through them
 
 
 
 #Current TODO <br>
 
 * Faster Ironclad cannon shots
+* Remove Raft Fuel requirements
 * Turret Parallax <br>
 * Sea oil configurable at new game screen - currently uses regular oil config.
 * Dock functionality - pulls in ships when player gets out nearby <br>

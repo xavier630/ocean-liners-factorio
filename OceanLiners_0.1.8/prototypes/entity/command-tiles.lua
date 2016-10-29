@@ -1,4 +1,4 @@
---require "tiles-effects"
+require "command-tile-logic"
 
 local default_enabled = true
 
@@ -75,38 +75,33 @@ data:extend({
   }
 })
 
---
--- create all the other types of tiles as variants of rotright
---
+--create other tiles based on the north facing tiles.
 
---[[for k, v in pairs(tiletypes) do
-  if k ~= "rotright" then
-    -- define the lefthanded one as a copy of the right-handed one
-    local entity = util.table.deepcopy(data.raw["tile"]["autocar-rotright"])
-    local item = util.table.deepcopy(data.raw["item"]["autocar-rotright"])
-    local recipe = util.table.deepcopy(data.raw["recipe"]["autocar-rotright"])
+for k, v in pairs(tiles) do --tiles is from command-tile-logic
 
-    -- ...specify entity, item, and recipe differences...
-    entity.name = "autocar-"..k
-    entity.minable.result = "autocar-"..k
-    entity.variants.main[1].picture = "__autocar__/graphics/directives/"..k..".png"
+  if k ~= "tile-face-north" then --Don't do anything for north since it was already created above.
+    -- copy the tile above to make all of the other tiles.
+    local entity = util.table.deepcopy(data.raw["tile"]["tile-face-north"])
+    local item = util.table.deepcopy(data.raw["item"]["tile-face-north"])
+    local recipe = util.table.deepcopy(data.raw["recipe"]["tile-face-north"])
+
+    --entity
+    entity.name = v.name
+    entity.minable.result = v.name
+    entity.variants.main[1].picture = "__OceanLiners__/graphics/tiles/"..v.name..".png"
     -- item
-    item.name = "autocar-"..k
-    item.icon = "__autocar__/graphics/directives/"..k..".png"
+    item.name = v.name
+    item.icon = "__OceanLiners__/graphics/tiles/"..v.name..".png"
     item.subgroup = v.subgroup
-    item.place_as_tile.result = "autocar-"..k
+    item.place_as_tile.result = v.name
     -- recipe
-    recipe.name = "autocar-"..k
-    recipe.result = "autocar-"..k
+    recipe.name = v.name
+    recipe.result = v.name
+    recipe.order = v.order
 
-    -- ...and insert them all
+    -- ...and insert them all - Thank you again Diptherial
     data.raw[entity.type][entity.name] = entity
     data.raw[item.type][item.name] = item
     data.raw[recipe.type][recipe.name] = recipe
   end
 end
-
--- correct the idle recipe to take less resources
-data.raw["recipe"]["autocar-idle"].ingredients = {
-  {"stone", 1}
-}]]

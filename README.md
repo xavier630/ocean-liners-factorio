@@ -50,8 +50,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * On character created, make sure the player isn't on water.
 
 ###Personal:
-* Multiple tiles at once
-* Tile sides look shallow water
+* Graphical issues when placing command tiles near coastline
 * Can layer 11 be used to fix ghost collisions? It's under Tile.lua in the official API
 
 

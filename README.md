@@ -18,8 +18,9 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Separate config mod
 * Amphibious car that transforms into a boat when driving onto water (Can drive on land and water)
 * Dynamite -  Potentially ask RSeding, add a config option too
-* Buoys - These can be rotated and have an arrow associated with them. When a ship reaches them, it's orientation will be changed to face the direction of the arrow and it will accelerate . Shouldn't work with sailing boats. Need to burn fuel though...
+* Buoys - These can be rotated and have an arrow associated with them. When a ship reaches them, it's orientation will be changed to face the direction of the arrow and it will accelerate . Shouldn't work with sailing boats. Need to burn fuel though, so minimise the number. Can make sure it only occurs once by recalling the position of the last
 * Stopping buoys - When a ship hits one of these it will face the direction of the arrow and stop. Can be started again with a circuit network? Ships need to remember their last buoy and not get stopped by it so that they can leave again
+* Stopping buoy that gives speed - Gives a burst of speed when the boat's inventory has been emptied.
 * Diagonal Buoys and stopping buoys.
 * Unloading stations? Ship goes in one arrow, slowly unloaded, out another side? Can you just put a stopping buoy by the shore and unload from that?
 * Separate pipes so that I don't mess with vanilla ones. Could build out of vanilla ones, but have perks: placable over water, higher throughput, player can go through them
@@ -51,7 +52,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 
 ###Personal:
 * Graphical issues when placing command tiles near coastline
-* Can layer 11 be used to fix ghost collisions? It's under Tile.lua in the official API
+* Can layer-11 etc be used to fix ghost collisions? Almost certainly, yay!
 
 
 #Needed Graphics
@@ -69,7 +70,8 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 
 #Changelog <br>
 
-* 0.2.0 - Sea oil no longer can be spawned atop other resources, added special tiles to automate ship travel.
+* 0.2.0 - Sea oil no longer can be spawned atop other resources, added special tiles to automate ship travel. 
+
 * 0.1.8 - Breaking a raft now correctly gives a raft. Pipes once again can be placed over water.
 * 0.1.7 - Fixed issues with cars not driving through gates, added a sailing raft, made oil-rigs only place-able on the ocean, tidied up recipes, added descriptions
 * 0.1.6 - Fixed issues with disconnected players in multiplayer. Stopped docks producing oil. Added config for swimming

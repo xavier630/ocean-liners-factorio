@@ -99,7 +99,7 @@ for k, v in pairs(tiles) do --tiles is from command-tile-logic
     recipe.result = v.name
     recipe.order = v.order
 
-    -- ...and insert them all - Thank you again Diptherial
+    --Add the new data to the game
     data.raw[entity.type][entity.name] = entity
     data.raw[item.type][item.name] = item
     data.raw[recipe.type][recipe.name] = recipe

@@ -38,3 +38,8 @@ tiles = {
    order="d",
   },
 }
+check_boat_tiles = function()
+  for k, v in (global.motor_boats) do
+    game.player.surface.print(v)
+  end
+end

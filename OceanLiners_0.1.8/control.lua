@@ -37,7 +37,10 @@ is_sailing_boat = function(name)
 end
 --takes a tile name
 is_water_tile = function(name)
-  if (name == "deepwater" or name == "water" or name == "deepwater-green" or name == "water-green") then
+  if (name == "deepwater" or name == "water" or name == "deepwater-green" or name == "water-green"
+      or name == "tile-face-north"
+
+  ) then
     return true
   else
     return false

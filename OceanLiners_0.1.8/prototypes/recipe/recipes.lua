@@ -19,11 +19,17 @@ data:extend( --Arrange menus
       group = "ocean-liners",
       order = "a",
     },
+    {
+      type = "item-subgroup",
+      name = "ocean-liners-tiles",
+      group = "ocean-liners",
+      order = "c",
+    },
 
 
   }
 
-)
+) --Add recipes
 data:extend(
   {
     {
@@ -99,8 +105,6 @@ data:extend(
       },
       result = "ocean-power-pole",
       result_count = 3,
-      description = "Very powerful power poles. Can only be placed over water."
-
     },
 
   })

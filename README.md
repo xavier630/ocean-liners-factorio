@@ -47,6 +47,12 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Biter bases spawning with RSO, No oil with RSO
 * Separate Mod that just offers swimming
 * Tanker ships based on railtanker - could fill from an ocean tank.
+* On character created, make sure the player isn't on water.
+
+###Personal:
+* Multiple tiles at once
+* Tile sides look shallow water
+* Can layer 11 be used to fix ghost collisions? It's under Tile.lua in the official API
 
 
 #Needed Graphics
@@ -64,6 +70,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 
 #Changelog <br>
 
+* 0.2.0 - Sea oil no longer can be spawned atop other resources, added special tiles to automate ship travel.
 * 0.1.8 - Breaking a raft now correctly gives a raft. Pipes once again can be placed over water.
 * 0.1.7 - Fixed issues with cars not driving through gates, added a sailing raft, made oil-rigs only place-able on the ocean, tidied up recipes, added descriptions
 * 0.1.6 - Fixed issues with disconnected players in multiplayer. Stopped docks producing oil. Added config for swimming

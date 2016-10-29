@@ -2,6 +2,7 @@
 data:extend(
   {
     {
+      --Boats--
       type = "item",
       name = "paddle-steamer",
       icon = "__OceanLiners__/graphics/paddle-steamer-icon.jpg",
@@ -31,6 +32,8 @@ data:extend(
       place_result = "raft",
       stack_size = 50
     },
+
+    --Infrastructure --
     {
       type = "item",
       name = "dock",
@@ -62,5 +65,9 @@ data:extend(
       place_result = "ocean-power-pole",
       stack_size = 50
     },
+
+
+
+
 
   })

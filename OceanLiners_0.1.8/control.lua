@@ -1,24 +1,34 @@
 require("functions.functions")
 require("functions.test-functions")
 require("prototypes.entity.command-tile-logic")
+require("functions.tile-functions")
 
 
+
+
+
+
+--============================
+--Set up events
+--==============================
 --On adding a boat make sure to change the isBoat function, same with tiles etc
-script.on_init(function()
-
+script.on_init(function(event)
+  on_init_tiles()
+end)
+script.on_load(function(event)
+  on_init_tiles()
+end)
+script.on_event(defines.events.on_built_entity,  function(event)
+  add_to_motor_boats(event)
 end)
 
 
-
-
-
-
- script.on_event(defines.events.on_tick, function(event)
+script.on_event(defines.events.on_tick, function(event)
   calculate_wind_impact()
- end)
+  check_boat_tiles()
+end)
 
-
- script.on_event(defines.events.on_entity_died, function(event) --Receive shells for killing fish
+script.on_event(defines.events.on_entity_died, function(event) --Receive shells for killing fish
    --[[if event.entity.name == "fish" then
      --player = game.players[1] --TODO Give ammo to the player who killed the fish
      --player.character.insert{name="cannon-shell", count=5}

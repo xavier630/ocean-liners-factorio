@@ -51,8 +51,10 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * On character created, make sure the player isn't on water.
 
 ###Personal:
-* Graphical issues when placing command tiles near coastline
+* Graphical issues with coastline.
 * Can layer-11 etc be used to fix ghost collisions? Almost certainly, yay!
+* Loading an older world - detected modifications to global table or similar. 
+
 
 
 #Needed Graphics

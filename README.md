@@ -49,11 +49,17 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Separate Mod that just offers swimming
 * Tanker ships based on railtanker - could fill from an ocean tank.
 * On character created, make sure the player isn't on water.
+* Fix gitignore
 
 ###Personal:
-* Graphical issues with coastline.
+
 * Can layer-11 etc be used to fix ghost collisions? Almost certainly, yay!
 * Loading an older world - detected modifications to global table or similar. 
+* Change the is_water_tile etc functions to call an "is_x(array)" function that takes an array. Then values only need to be in an array.
+* Tile graphics with shoreline
+* Fuel cost - could be configurable
+* 
+
 
 
 

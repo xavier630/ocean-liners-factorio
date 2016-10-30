@@ -5,6 +5,7 @@ tiles = {
     name="tile-face-north",
     effect=function(car, meta)
   		car.orientation = 0
+			car.speed = 0.15
       return true
   	end,
     subgroup="ocean-liners-tiles",
@@ -14,6 +15,8 @@ tiles = {
    name="tile-face-east",
    effect=function(car, meta)
      car.orientation = 0.25
+		 car.speed = 0.15
+
      return true
    end,
    subgroup="ocean-liners-tiles",
@@ -23,6 +26,8 @@ tiles = {
   name="tile-face-south",
   effect=function(car, meta)
     car.orientation = 0.5
+		car.speed = 0.15
+
     return true
   end,
   subgroup="ocean-liners-tiles",
@@ -32,14 +37,11 @@ tiles = {
    name="tile-face-west",
    effect=function(car, meta)
      car.orientation = 0.75
+		 car.speed = 0.15
+
      return true
    end,
    subgroup="ocean-liners-tiles",
    order="d",
   },
 }
-check_boat_tiles = function()
-  for k, v in (global.motor_boats) do
-    game.player.surface.print(v)
-  end
-end

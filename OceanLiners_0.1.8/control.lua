@@ -21,6 +21,10 @@ end)
 script.on_event(defines.events.on_built_entity,  function(event)
   add_to_motor_boats(event)
 end)
+script.on_event(defines.events.on_preplayer_mined_item,  function(event)
+  remove_from_motor_boats(event)
+end)
+
 
 
 script.on_event(defines.events.on_tick, function(event)

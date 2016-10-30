@@ -13,4 +13,7 @@ check_nearby_entities = function(event)
   surface.print(surface.get_tile(pos1, pos2).name)]]
   --local item = event.itemstack
   --game.players[event.player_index].surface.print(data.raw["gate"]["gate"].collision_mask)
+  for _, entity in pairs(global.motor_boats) do
+   game.players[1].surface.print(entity.name .. " " .. entity.type)
+  end
 end

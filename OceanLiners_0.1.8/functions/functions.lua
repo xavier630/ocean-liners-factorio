@@ -22,6 +22,14 @@ is_sailing_boat = function(name)
   end
 end
 --takes a tile name
+is_special_tile = function(name)
+  if (name == "tile-face-north" or name == "tile-face-east" or name == "tile-face-south" or name == "tile-face-west") then
+    return true
+  else
+    return false
+  end
+end
+--takes a tile name
 is_water_tile = function(name)
   if (name == "deepwater" or name == "water" or name == "deepwater-green" or name == "water-green"
       or name == "tile-face-north" or name == "tile-face-east" or name == "tile-face-south" or name == "tile-face-west"

@@ -38,13 +38,11 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * New type of self-sufficient offshore pumps (takes accumlators and solar panels in the crafting)?
 * Change sea-oil collision_mask to avoid ships - Potentially not possible since both ships and this need "ground-tile" collisions
 * Fix resources with angels spawning on water - haven't reproduced yet.
-* Check when getting out of a boat for nearby land and move player there?
 * Deep water - way to use water_tile in its mask and still spawn oil.
 * Really cheap yacht, costs a bit of wood and some iron.
 * Ironclads and paddle steamers cost electric engines
 * Life-vest graphics when swimming
 * Move entities to their own files, eg oil-pumps.lua with the current oil-rig and the new self-sufficient pump.
-* Check pipe collision masks with Squakthrough
 * Biter bases spawning with RSO, No oil with RSO
 * Separate Mod that just offers swimming
 * Tanker ships based on railtanker - could fill from an ocean tank.

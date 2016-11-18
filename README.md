@@ -48,6 +48,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Tanker ships based on railtanker - could fill from an ocean tank.
 * On character created, make sure the player isn't on water.
 * Fix gitignore
+* Add config option to receive ammo from fish
 
 ###Personal:
 

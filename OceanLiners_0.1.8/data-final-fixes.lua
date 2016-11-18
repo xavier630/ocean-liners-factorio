@@ -1,6 +1,7 @@
 --The place where vanilla entities are overridden -- define boats here because cars get overridden in this file.
+require("functions.functions")
 data.raw["tile"]["deepwater"].collision_mask={ "item-layer"}
-data.raw["tile"]["water"].collision_mask={ "item-layer", "water-tile", "ghost-layer"}
+data.raw["tile"]["water"].collision_mask={ "item-layer", "water-tile", "layer-14"}
 data.raw["tile"]["deepwater-green"].collision_mask={"item-layer"}
 data.raw["tile"]["water-green"].collision_mask={"item-layer", "water-tile"}
 data.raw["curved-rail"]["curved-rail"].collision_mask={"object-layer", "not-colliding-with-itself"}
@@ -9,7 +10,7 @@ data.raw["fish"]["fish"] = nil
 local pipe = data.raw["pipe"]
 local pipe_to_ground = data.raw["pipe-to-ground"]
 local car = data.raw["car"]
-local biter = data.raw["unit-spawner"]
+local biter_lair = data.raw["unit-spawner"]
 
 
 for k,v in pairs(pipe) do --collision changes apply to all pipes.
@@ -19,9 +20,11 @@ for k,v in pairs(pipe_to_ground) do --collision changes apply to all pipes.
   v.collision_mask={"object-layer"}
 end
 for k,v in pairs(car) do
-  v.collision_mask={"player-layer", "ghost-layer"} --ghost layer here to work with water. Can't do water-tile because then can't pass through gates.
-end --I wish the game would allow custom collision masks
-for k,v in pairs(biter) do
+  if (not is_plane(car.name)) then
+    v.collision_mask={"player-layer", "layer-14"} --ghost layer here to work with water. Can't do water-tile because then can't pass through gates.
+  end
+end
+for k,v in pairs(biter_lair) do
   v.collision_mask={"water-tile", "player-layer"} --only the spawners, not the bugs. -- make sure biter lairs don't spawn on shallow water.
 end
 

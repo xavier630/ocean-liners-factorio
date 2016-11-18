@@ -1,3 +1,5 @@
+planes = {"plane", "airplane", "aircraft", "cargo-plane", "jet", "gunship", "flying-fortress"}
+--TODO Migrate all "is_x" to a format like planes
 is_motor_boat = function(name)
   if (name == "ironclad" or name == "paddle-steamer") then
     return true
@@ -39,6 +41,19 @@ is_water_tile = function(name)
   else
     return false
   end
+end
+
+is_plane = function(name)
+  return is_type(name, planes)
+end
+
+is_type = function(name, array)
+  for k, v in pairs(array) do
+    if (name == v) then
+      return true
+    end
+  end
+  return false
 end
 
 

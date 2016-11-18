@@ -6,4 +6,7 @@ biters_cross_water = false
 --If you want players to be able to swim slowly through water to get to boats, set this to true.
 player_swimming = true
 
---TNT to create water Coming soon
+--TNT to create water - Coming soon
+
+
+--Receive ammo for killing fish - Coming soon

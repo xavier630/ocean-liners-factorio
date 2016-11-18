@@ -51,6 +51,9 @@ script.on_event(defines.events.on_entity_died, function(event) --Receive shells 
 
  script.on_event(defines.events.on_player_crafted_item, function(event) --Script to test for entities around the player
    --check_nearby_entities(event)
+   --game.players[1].surface.print(is_plane("cargo-plane"))
+   --game.players[1].surface.print(data.raw["car"][1].name)
+
  end)
 
  script.on_event(defines.events.on_chunk_generated, function(event) --delete all resources and plants on water except oil

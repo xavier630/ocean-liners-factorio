@@ -1,46 +1,29 @@
-planes = {"plane", "airplane", "aircraft", "cargo-plane", "jet", "gunship", "flying-fortress"}
---TODO Migrate all "is_x" to a format like planes
-is_motor_boat = function(name)
-  if (name == "ironclad" or name == "paddle-steamer") then
-    return true
-  else
-    return false
-  end
-end
---takes an entity name
-is_boat = function(name)
-  if (name == "ironclad" or name == "paddle-steamer" or name == "raft") then
-    return true
-  else
-    return false
-  end
-end
---takes an entity name
-is_sailing_boat = function(name)
-  if (name == "raft") then
-    return true
-  else
-    return false
-  end
-end
---takes a tile name
-is_special_tile = function(name)
-  if (name == "tile-face-north" or name == "tile-face-east" or name == "tile-face-south" or name == "tile-face-west") then
-    return true
-  else
-    return false
-  end
-end
---takes a tile name
-is_water_tile = function(name)
-  if (name == "deepwater" or name == "water" or name == "deepwater-green" or name == "water-green"
-      or name == "tile-face-north" or name == "tile-face-east" or name == "tile-face-south" or name == "tile-face-west"
+local planes = {"plane", "airplane", "aircraft", "cargo-plane", "jet", "gunship", "flying-fortress"}
+local water_tiles = {"deepwater", "water", "deepwater-green", "water-green", "tile-face-north", "tile-face-east", "tile-face-south", "tile-face-west"}
+local boats = {"ironclad", "paddle-steamer", "raft"}
+local motor_boats = {"ironclad", "paddle-steamer"}
+local special_tiles = {"tile-face-north", "tile-face-east", "tile-face-south", "tile-face-west"}
+local sailing_boats = {"raft"}
 
-  ) then
-    return true
-  else
-    return false
-  end
+--Note that all of these function take an entity name
+is_motor_boat = function(name)
+  return is_type(name, boats)
+end
+
+is_boat = function(name)
+  return is_type(name, motor_boats)
+end
+
+is_sailing_boat = function(name)
+  return is_type(name, sailing_boats)
+end
+
+is_special_tile = function(name)
+  return is_type(name, special_tiles)
+end
+
+is_water_tile = function(name)
+  return is_type(name, water_tiles)
 end
 
 is_plane = function(name)

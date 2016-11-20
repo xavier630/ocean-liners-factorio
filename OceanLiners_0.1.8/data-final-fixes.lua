@@ -20,9 +20,10 @@ for k,v in pairs(pipe_to_ground) do --collision changes apply to all pipes.
   v.collision_mask={"object-layer"}
 end
 for k,v in pairs(car) do
-  if (not is_plane(car.name)) then
+  if (not is_plane(v.name)) then
     v.collision_mask={"player-layer", "layer-14"} --ghost layer here to work with water. Can't do water-tile because then can't pass through gates.
   end
+
 end
 for k,v in pairs(biter_lair) do
   v.collision_mask={"water-tile", "player-layer"} --only the spawners, not the bugs. -- make sure biter lairs don't spawn on shallow water.

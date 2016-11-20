@@ -53,6 +53,13 @@ script.on_event(defines.events.on_entity_died, function(event) --Receive shells 
    --check_nearby_entities(event)
    --game.players[1].surface.print(is_plane("cargo-plane"))
    --game.players[1].surface.print(data.raw["car"][1].name)
+   local car = data.raw["car"]
+   --for k,v in pairs(car) do
+    -- game.players[1].surface.print(data.raw["car"].name)
+     --if (not is_plane(car.name)) then
+       --v.collision_mask={"player-layer", "layer-14"} --ghost layer here to work with water. Can't do water-tile because then can't pass through gates.
+     --end
+  --end
 
  end)
 

@@ -24,7 +24,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Diagonal Buoys and stopping buoys.
 * Unloading stations? Ship goes in one arrow, slowly unloaded, out another side? Can you just put a stopping buoy by the shore and unload from that?
 * Separate pipes so that I don't mess with vanilla ones. Could build out of vanilla ones, but have perks: placable over water, higher throughput, player can go through them
-
+* Ejecting tile which ejects passengers by setting vehicle.passenger to nil
 
 
 #Current TODO <br>
@@ -77,7 +77,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 
 #Changelog <br>
 
-* 0.2.0 - Sea oil no longer can be spawned atop other resources, added special tiles to automate ship travel. 
+* 0.2.0 - Sea oil no longer can be spawned atop other resources, added special tiles to automate ship travel. Fixed compatibility issues with the Aircraft mod. This version may require a new game to function properly.
 
 * 0.1.8 - Breaking a raft now correctly gives a raft. Pipes once again can be placed over water.
 * 0.1.7 - Fixed issues with cars not driving through gates, added a sailing raft, made oil-rigs only place-able on the ocean, tidied up recipes, added descriptions

@@ -106,7 +106,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Project structure should be something like : <br>
 %appdata%---factorio---mod---ocean_liners_x.x.x (develop in this folder) <br>
  ''''''''''''''''''''''''''''''''''''''|<br>
- ''''''''''''''''''''''''''''''''''''''\\---git repo (save changes here) (TODO add .bat file to copy all changes from "ocean_liners*" in the mod folder to   '''''''''''''''''''''''''''''''''''''''''''''''''''''''override git repo folder). 
+ ''''''''''''''''''''''''''''''''''''''\\---git repo (save changes here) (TODO add .bat file to copy all changes from "ocean_liners*" in the mod folder to override git repo folder). 
       
 * Test items using "/c game.player.insert{name="item", count=5}"
 

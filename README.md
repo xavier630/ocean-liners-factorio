@@ -7,7 +7,6 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 
 * Side Cannons On Frigates <br>
 * Docks - Can take inserters, boat stays near, player deposited in same location <br>
-* Sailing Ships - acceleration dependent on Wind <br>
 * Paths between docks. - sounds hard - maybe with invisible rails ;) <br>
 * Quays to moor boats
 * Add Oceans + large interconnected lakes
@@ -16,8 +15,6 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * New types of fish eg sharks
 * Whirlpools
 * Separate config mod
-* Amphibious car that transforms into a boat when driving onto water (Can drive on land and water)
-* Dynamite -  Potentially ask RSeding, add a config option too
 * Buoys - These can be rotated and have an arrow associated with them. When a ship reaches them, it's orientation will be changed to face the direction of the arrow and it will accelerate . Shouldn't work with sailing boats. Need to burn fuel though, so minimise the number. Can make sure it only occurs once by recalling the position of the last
 * Stopping buoys - When a ship hits one of these it will face the direction of the arrow and stop. Can be started again with a circuit network? Ships need to remember their last buoy and not get stopped by it so that they can leave again
 * Stopping buoy that gives speed - Gives a burst of speed when the boat's inventory has been emptied.
@@ -25,6 +22,15 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Unloading stations? Ship goes in one arrow, slowly unloaded, out another side? Can you just put a stopping buoy by the shore and unload from that?
 * Separate pipes so that I don't mess with vanilla ones. Could build out of vanilla ones, but have perks: placable over water, higher throughput, player can go through them
 * Ejecting tile which ejects passengers by setting vehicle.passenger to nil
+* Tiles cost Fuel
+* Dredging boat - Driving gives sand which can be crafted into stone (or driving gives stone).
+* Fishing boat - Driving gives fish, need to add some uses for fish.
+* Special, configurable ocean biters.
+* Oil tanker - essential container-ship but for fluid. Maybe an oil tanker can be combined with a cargo ship for the ultimate transport boat.
+* Wind slightly affects all ships
+* Undersea ore deposits - normal ore with a more submerged picture and a new means of harvesting.
+* Harvesters which autonomously gather sea oil/minerals. (See Red Alert Harvesters).
+
 
 
 # Current TODO <br>
@@ -53,11 +59,11 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 ### Personal:
 
 * Can layer-11 etc be used to fix ghost collisions? Almost certainly, yay!
-* Loading an older world - detected modifications to global table or similar. 
+* Loading an older world - detected modifications to global table or similar.
 * Change the is_water_tile etc functions to call an "is_x(array)" function that takes an array. Then values only need to be in an array.
 * Tile graphics with shoreline
 * Fuel cost - could be configurable
-* 
+*
 
 
 
@@ -83,7 +89,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * 0.1.7 - Fixed issues with cars not driving through gates, added a sailing raft, made oil-rigs only place-able on the ocean, tidied up recipes, added descriptions
 * 0.1.6 - Fixed issues with disconnected players in multiplayer. Stopped docks producing oil. Added config for swimming
 * 0.1.5 - Fixed issues with cars being able to drive onto water. Made rails place-able over water. Fixed issues with biter attacks across ocean and added it as a config option
-* 0.1.4 - Fixed issue with player collisions 
+* 0.1.4 - Fixed issue with player collisions
 * 0.1.3 - Increased sea-oil size on map, stopped sea-oil spawning too close together, adding swimming to the mod, numerous other small fixes
 * 0.1.2 - Removed git files to significantly reduce size
 * 0.1.1 - Fixed issues with decorative shrubs being placed on water
@@ -92,7 +98,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 # Issues <br>
 
 * Deep sea isn't formally a water tile at the moment so that resources (sea oil) can spawn on it. This should be unnoticable in general, but lets you do some odd things like placing a car onto it, etc.
-* Car can't pass through ghost entities. I had to do this to allow gates to stop them, but let the player through. 
+* Car can't pass through ghost entities. I had to do this to allow gates to stop them, but let the player through.
 
 
 # Questions <br>
@@ -106,7 +112,6 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Project structure should be something like : <br>
 %appdata%---factorio---mod---ocean_liners_x.x.x (develop in this folder) <br>
  ''''''''''''''''''''''''''''''''''''''|<br>
- ''''''''''''''''''''''''''''''''''''''\\---git repo (save changes here) (TODO add .bat file to copy all changes from "ocean_liners*" in the mod folder to override git repo folder). 
-      
-* Test items using "/c game.player.insert{name="item", count=5}"
+ ''''''''''''''''''''''''''''''''''''''\\---git repo (save changes here) (TODO add .bat file to copy all changes from "ocean_liners*" in the mod folder to override git repo folder).
 
+* Test items using "/c game.player.insert{name="item", count=5}"

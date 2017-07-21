@@ -1,1 +1,1 @@
-git archive -o OceanLiners_0.1.2.zip HEAD
+git archive -o OceanLiners_0.2.0.zip HEAD

@@ -32,8 +32,28 @@ data:extend(
       place_result = "raft",
       stack_size = 50
     },
+    {
+      type = "item",
+      name = "container-ship",
+      icon = "__OceanLiners__/graphics/paddle-steamer-icon.jpg",
+      flags = {"goes-to-quickbar"},
+      subgroup = "ocean-liners-boats",
+          order = "b[boats]-a[sailing]",
+      place_result = "container-ship",
+      stack_size = 50
+    },
+    {
+      type = "item",
+      name = "amphibious-car",
+      icon = "__OceanLiners__/graphics/paddle-steamer-icon.jpg",
+      flags = {"goes-to-quickbar"},
+      subgroup = "ocean-liners-boats",
+          order = "b[boats]-a[sailing]",
+      place_result = "amphibious-car",
+      stack_size = 50
+    },
 
-    --Infrastructure --
+    --Infrastructure--
     {
       type = "item",
       name = "dock",

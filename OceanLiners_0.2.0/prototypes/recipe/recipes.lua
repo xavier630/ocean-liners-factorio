@@ -32,6 +32,7 @@ data:extend( --Arrange menus
 ) --Add recipes
 data:extend(
   {
+    --Boats--
     {
       type = "recipe",
       name = "paddle-steamer",
@@ -68,6 +69,36 @@ data:extend(
       },
       result = "raft"
     },
+    {
+      type = "recipe",
+      name = "container-ship",
+      enabled = "true",
+      ingredients =
+      {
+        {"iron-plate", 400},
+        {"steel-plate", 200},
+        {"iron-gear-wheel", 150},
+        {"engine-unit", 18},
+
+      },
+      result = "container-ship"
+    },
+    {
+      type = "recipe",
+      name = "amphibious-car",
+      enabled = "true",
+      ingredients =
+      {
+        {"iron-plate", 10},
+        {"steel-plate", 10},
+        {"iron-gear-wheel", 15},
+        {"engine-unit", 3},
+
+      },
+      result = "amphibious-car"
+    },
+
+    --Infrastructure--
     {
       type = "recipe",
       name = "dock",

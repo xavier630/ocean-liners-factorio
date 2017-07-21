@@ -3,7 +3,7 @@ require "command-tile-logic"
 local default_enabled = true
 
 --CREDIT
---Code for tiles by Diphtherial for Autocar with some changes by Xavier Downs
+--Code for tiles by Diphtherial for Autocar with some small changes by Xavier Downs
 
 
 data:extend({
@@ -14,7 +14,7 @@ data:extend({
     minable = {hardness = 0.2, mining_time = 0.01, result = "tile-face-north"},
     mined_sound = { filename = "__base__/sound/deconstruct-bricks.ogg" },
     collision_mask = {"item-layer"},
-    layer = 101,
+    layer = 5,
     variants =
     {
       main =

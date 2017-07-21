@@ -26,7 +26,7 @@ data:extend({
         },
         collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},--{{0, 0}, {0, 0}}, --Can either have small map icons or few oil collisions
         selection_box = {{ -0.5, -0.5}, {0.5, 0.5}}, --Because ground-tile has both cars and oil as a collision_mask
-        collision_mask = {"ground-tile", "resource-layer"}, --"object-layer"
+        collision_mask = {"resource-layer"},
         autoplace =
         {
           control = "crude-oil",

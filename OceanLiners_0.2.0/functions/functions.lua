@@ -104,20 +104,29 @@ function cleanse_chunk(event)
     -- if (i.valid) -- then only needed when deleting surrounding oil, not the current oil
       local pos = i.position
       local tile = surface.get_tile(pos.x, pos.y)
-      if (i.name == "sea-oil") then --Make sure oil isn't too close together
-         local area = {{pos.x - 3, pos.y - 3}, {pos.x + 3, pos.y + 3}}
-         local neighbours = surface.find_entities_filtered({area=area, name = "sea-oil"})
+      if (i.name == "sea-oil") then
+
+         --remove closely grouped oil--
+         local area = {{pos.x - 3, pos.y - 3}, {pos.x + 3, pos.y + 3}}  --Make sure oil isn't too close together
+         local neighbours = surface.find_entities_filtered({area=area, name="sea-oil"})
 
          for key, j in pairs(neighbours) do
-           if (j ~= i) then
+           if ((j ~= i) or not (is_water_tile(tile.name))) then --if there are close neighbours or oil is on land, destroy it.
              --Can either delete the surround oil or delete this oil.
              i.destroy()
              break
-             --j.destroy()
            end
          end
+
+        --Remove land oil-- "not (is_water_tile(tile.name)))" - this condition removes any oil spawned on land.
+        --the reason it needs to spawn on land is that oil can't have a ground tile collision_mask
+        --because oil rigs need that and rigs will be unplaceable if they both have it.
+        -- so solution is to spawn it everywhere and delete any not on the ocean.
+
+
       else
         if (is_water_tile(tile.name)) then -- Destroy if not crude oil and over the water
+         --can add conditions here to keep other resources
          i.destroy()
         end
       end --end if

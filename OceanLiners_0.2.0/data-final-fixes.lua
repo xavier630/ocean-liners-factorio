@@ -1,8 +1,8 @@
 --The place where vanilla entities are overridden -- define boats here because cars get overridden in this file.
 require("functions.functions")
-data.raw["tile"]["deepwater"].collision_mask={ "item-layer"}
+data.raw["tile"]["deepwater"].collision_mask={ "item-layer", "layer-14"} --layer 15 used for when swimming is disabled so the player can't walk on deepwater
 data.raw["tile"]["water"].collision_mask={ "item-layer", "water-tile", "layer-14"}
-data.raw["tile"]["deepwater-green"].collision_mask={"item-layer"}
+data.raw["tile"]["deepwater-green"].collision_mask={"item-layer", "layer-14"}
 data.raw["tile"]["water-green"].collision_mask={"item-layer", "water-tile", "layer-14"}
 data.raw["curved-rail"]["curved-rail"].collision_mask={"object-layer", "not-colliding-with-itself"}
 data.raw["straight-rail"]["straight-rail"].collision_mask={"object-layer", "not-colliding-with-itself"}
@@ -13,7 +13,7 @@ local biter_lair = data.raw["unit-spawner"]
 
 for k,v in pairs(car) do
   if (not is_plane(v.name)) then
-    v.collision_mask={"player-layer", "layer-14"} --ghost layer here to work with water. Can't do water-tile because then can't pass through gates.
+    v.collision_mask={"player-layer", "layer-14"} --Can't do water-tile because then can't pass through gates.
   end
 end
 for k,v in pairs(biter_lair) do

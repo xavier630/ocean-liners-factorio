@@ -9,7 +9,7 @@ end
 if (player_swimming) then
   data.raw["player"]["player"].collision_mask={"player-layer"}
 else
-  data.raw["player"]["player"].collision_mask={"player-layer", "water-tile"}
+  data.raw["player"]["player"].collision_mask={"player-layer", "water-tile", "layer-14"}
 end
 
 --pass through pipes

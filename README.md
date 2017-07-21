@@ -3,7 +3,7 @@ This mods adds ships to Factorio.
 
 Drivable ships to sail across the oceans. You can even use landfill from within a ship!
 
-#Ideas: <br>
+# Ideas: <br>
 
 * Side Cannons On Frigates <br>
 * Docks - Can take inserters, boat stays near, player deposited in same location <br>
@@ -27,7 +27,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Ejecting tile which ejects passengers by setting vehicle.passenger to nil
 
 
-#Current TODO <br>
+# Current TODO <br>
 
 * Faster Ironclad cannon shots
 * Remove Raft Fuel requirements
@@ -50,7 +50,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Fix gitignore
 * Add config option to receive ammo from fish
 
-###Personal:
+### Personal:
 
 * Can layer-11 etc be used to fix ghost collisions? Almost certainly, yay!
 * Loading an older world - detected modifications to global table or similar. 
@@ -62,12 +62,12 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 
 
 
-#Needed Graphics
+# Needed Graphics
 * All item textures and icons
 * Animations for swimming in water
 
 
-#Installation <br>
+# Installation <br>
 
 * Download as a zip and make sure to save it as 'OceanLiner_x.x.x' <br>
 * Put the zip in your mods folder! <br>
@@ -75,7 +75,7 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * Ubuntu: ~/.factorio
 
 
-#Changelog <br>
+# Changelog <br>
 
 * 0.2.0 - Sea oil no longer can be spawned atop other resources, added special tiles to automate ship travel. Fixed compatibility issues with the Aircraft mod. This version may require a new game to function properly.
 
@@ -89,18 +89,18 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 * 0.1.1 - Fixed issues with decorative shrubs being placed on water
 * 0.1.0 - Initial release
 
-#Issues <br>
+# Issues <br>
 
 * Deep sea isn't formally a water tile at the moment so that resources (sea oil) can spawn on it. This should be unnoticable in general, but lets you do some odd things like placing a car onto it, etc.
 * Car can't pass through ghost entities. I had to do this to allow gates to stop them, but let the player through. 
 
 
-#Questions <br>
+# Questions <br>
 
 * Should oil rigs be placable only over the ocean?
 * Should players be able to walk through all kinds of pipes? Would be very convenient when at sea and driving across pipes.
 
-#To Check <br>
+# To Check <br>
 
 * 
 

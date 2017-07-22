@@ -83,7 +83,8 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 
 # Changelog <br>
 
-* 0.2.0 - Sea oil no longer can be spawned atop other resources, added special tiles to automate ship travel. Fixed compatibility issues with the Aircraft mod. This version may require a new game to function properly.
+* 0.2.0 - Sea oil no longer can be spawned atop other resources, added special tiles to automate ship travel. Fixed compatibility issues with the Aircraft mod. This version may require a new game to function properly. Cars can no longer be placed over deep sea and the player can't swim on it when swimming is disabled. Added amphibious cars and container ships. Explosives can now be used to create water (it takes a lot of skill and patience though to get it right). More config options have been added.
+A new world is recommended. Version targets Factorio 0.15.
 
 * 0.1.8 - Breaking a raft now correctly gives a raft. Pipes once again can be placed over water.
 * 0.1.7 - Fixed issues with cars not driving through gates, added a sailing raft, made oil-rigs only place-able on the ocean, tidied up recipes, added descriptions

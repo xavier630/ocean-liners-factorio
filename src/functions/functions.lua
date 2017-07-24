@@ -1,8 +1,16 @@
-local planes = {"plane", "airplane", "aircraft", "cargo-plane", "jet", "gunship", "flying-fortress"}
-local water_tiles = {"deepwater", "water", "deepwater-green", "water-green", "tile-face-north", "tile-face-east", "tile-face-south", "tile-face-west"}
+local planes = {"plane", "airplane", "heli-placement-entity-_-",
+ "heli-entity-_-", "heli-body-entity-_-", "heli-shadow-entity-_-", "heli-burner-entity-_-",
+ "aircraft", "cargo-plane", "jet", "gunship", "flying-fortress"}
+
+local water_tiles = {"deepwater", "water", "deepwater-green", "water-green",
+ "tile-face-north", "tile-face-east", "tile-face-south", "tile-face-west"}
+
 local boats = {"ironclad", "paddle-steamer", "raft"}
+
 local motor_boats = {"ironclad", "paddle-steamer"}
+
 local special_tiles = {"tile-face-north", "tile-face-east", "tile-face-south", "tile-face-west"}
+
 local sailing_boats = {"raft"}
 
 --Note that all of these function take an entity name

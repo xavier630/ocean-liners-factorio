@@ -14,7 +14,7 @@ data:extend({
         percent = 100
       }
     },
-    collision_mask = {"ground-tile"},
+    collision_mask = {"ground-tile", "object-layer"},
     collision_box = {{-0.65, -0.65}, {0.65, 0.65}},
     selection_box = {{-1, -1}, {1, 1}},
     drawing_box = {{-1, -3}, {1, 0.5}},

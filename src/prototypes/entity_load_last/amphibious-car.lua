@@ -22,7 +22,7 @@ data:extend({
             decrease = 40
           }
         },
-        collision_mask = {"player-layer"},
+        collision_mask = {"player-layer", "object-layer"},
         collision_box = {{-0.2, -0.4}, {0.2, 0.4}},
         selection_box = {{-0.7, -1}, {0.7, 1}},
         effectivity = 0.8,

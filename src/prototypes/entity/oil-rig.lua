@@ -1,21 +1,19 @@
-data:extend({
+data:extend(
+{
   {
     type = "mining-drill",
     name = "oil-rig",
-    collision_mask =
-    {
-      "ground-tile"
-    },
     icon = "__base__/graphics/icons/pumpjack.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "oil-rig"},
+    collision_mask = {"ground-tile", "object-layer"},
     resource_categories = {"basic-fluid"},
-    max_health = 100,
+    max_health = 200,
     corpse = "big-remnants",
     dying_explosion = "medium-explosion",
-    collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
+    collision_box = {{ -1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{ -1.5, -1.5}, {1.5, 1.5}},
-    --drawing_box = {{-1.6, -2.5}, {1.5, 1.6}},
+    drawing_box = {{-1.6, -2.5}, {1.5, 1.6}},
     energy_source =
     {
       type = "electric",
@@ -23,7 +21,7 @@ data:extend({
       emissions = 0.15 / 1.5,
       usage_priority = "secondary-input"
     },
-    fluid_box =
+    output_fluid_box =
     {
       base_area = 1,
       base_level = 1,
@@ -35,7 +33,7 @@ data:extend({
         }
       },
     },
-    energy_usage = "75kW",
+    energy_usage = "90kW",
     mining_speed = 2,
     mining_power = 3,
     resource_searching_radius = 0.49,
@@ -50,6 +48,7 @@ data:extend({
       width = 12,
       height = 12
     },
+    monitor_visualization_tint = {r=78, g=173, b=255},
     base_picture =
     {
       sheet =
@@ -58,7 +57,7 @@ data:extend({
         priority = "extra-high",
         width = 114,
         height = 113,
-        shift = {0.1875, -0.03125}
+        shift = util.by_pixel(6, -0.5)
       }
     },
     animations =
@@ -69,7 +68,7 @@ data:extend({
         width = 116,
         height = 110,
         line_length = 10,
-        shift = {0.125, -0.71875},
+        shift = util.by_pixel(4, -23),
         filename = "__base__/graphics/entity/pumpjack/pumpjack-animation.png",
         frame_count = 40,
         animation_speed = 0.5
@@ -81,8 +80,22 @@ data:extend({
       sound = { filename = "__base__/sound/pumpjack.ogg" },
       apparent_volume = 1.5,
     },
-    fast_replaceable_group = "pumpjack"
-  },
-
-
-})
+    fast_replaceable_group = "pumpjack",
+    circuit_wire_connection_points =
+    {
+      get_circuit_connector_wire_shifting_for_connector({0.15625, -1.0625}, {0.15625, -1.0625}, 2),
+      get_circuit_connector_wire_shifting_for_connector({0.15625, -1.0625}, {0.15625, -1.0625}, 2),
+      get_circuit_connector_wire_shifting_for_connector({0.15625, -1.0625}, {0.15625, -1.0625}, 2),
+      get_circuit_connector_wire_shifting_for_connector({0.15625, -1.0625}, {0.15625, -1.0625}, 2)
+    },
+    circuit_connector_sprites =
+    {
+      get_circuit_connector_sprites({0.15625, -1.0625}, {0.15625, -1.0625}, 2),
+      get_circuit_connector_sprites({0.15625, -1.0625}, {0.15625, -1.0625}, 2),
+      get_circuit_connector_sprites({0.15625, -1.0625}, {0.15625, -1.0625}, 2),
+      get_circuit_connector_sprites({0.15625, -1.0625}, {0.15625, -1.0625}, 2)
+    },
+    circuit_wire_max_distance = 9,
+  }
+}
+)

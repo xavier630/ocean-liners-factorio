@@ -3,7 +3,7 @@
 
 
 --entity
-require("prototypes.entity.entities")
+require("prototypes.entity.dock")
 require("prototypes.entity.sea-oil")
 require("prototypes.entity.oil-rig")
 require("prototypes.entity.ocean-power-pole")

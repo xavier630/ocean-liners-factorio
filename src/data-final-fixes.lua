@@ -6,11 +6,13 @@ data.raw["tile"]["deepwater-green"].collision_mask = {"item-layer", "layer-14"}
 data.raw["tile"]["water-green"].collision_mask = {"item-layer", "water-tile", "layer-14"}
 data.raw["curved-rail"]["curved-rail"].collision_mask = {"object-layer", "not-colliding-with-itself"}
 data.raw["straight-rail"]["straight-rail"].collision_mask = {"object-layer", "not-colliding-with-itself"}
-data.raw["fish"]["fish"] = nil
+
+local_fish = data.raw["fish"]["fish"]
+local_fish.collision_mask = {"ground-tile"}
+local_fish.collision_box = {{-0.1, -0.1}, {0.1, 0.1}}
+local_fish.max_health = 1
 
 local car = data.raw["car"]
-local biter_lair = data.raw["unit-spawner"]
-
 -- Change collision mask of all cars
 for k,v in pairs(car) do
   if (not is_plane(v.name)) then
@@ -18,15 +20,8 @@ for k,v in pairs(car) do
   end
 end
 
-
-data.raw["fish"]["fish"].collision_mask={"ground-tile"}
-fish.collision_mask = {"ground-tile"}
-fish.collision_box = {{-0.1, -0.1}, {0.1, 0.1}}
-fish.max_health = 1,
-
 --KEEP ALL BOATS HERE - it's important that the boats are loaded after the changes to cars above
 require("prototypes.entity.load-last-entities.load-last-entities")
-
 
 --Load config last to ensure compatibility with other mods that change cars, biters, etc
 require("config-impl")

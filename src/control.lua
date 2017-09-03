@@ -3,11 +3,6 @@ require("functions.test-functions")
 require("prototypes.entity.command-tile-logic")
 require("functions.tile-functions")
 
-
-
-
-
-
 --============================
 --Set up events
 --==============================

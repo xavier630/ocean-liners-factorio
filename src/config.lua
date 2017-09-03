@@ -2,11 +2,11 @@
 
 --Note as of version 0.1.5, biters can move at full speed when swimming while players are heavily slowed. Have fun!
 --If you want biters to cross water set to true - Not sure if biter spawners will also appear on water, will need to test.
-biters_cross_water = true
+biters_cross_water = false
 
 --If you want biter based to spawn on water.
 --Make sure to ONLY enable this if "biters_cross_water" is enabled or expect some strange results.
-biters_bases_spawn_on_water = true
+biters_bases_spawn_on_water = false
 
 --If you want players to be able to swim slowly through water to get to boats, set this to true.
 player_swimming = true
@@ -19,5 +19,8 @@ explosives_create_water = true
 
 --Sea oil base-coverage (default is 0.04)
 sea_oil_coverage = 0.04
+
+--Decoratives on water (eg no shrubs can grow on water)
+--decoratives_on_water = false;
 
 --Receive ammo for killing fish - Coming soon

@@ -5,20 +5,20 @@ local planes = {"plane", "airplane", "heli-placement-entity-_-",
 local water_tiles = {"deepwater", "water", "deepwater-green", "water-green",
  "tile-face-north", "tile-face-east", "tile-face-south", "tile-face-west"}
 
-local boats = {"ironclad", "paddle-steamer", "raft"}
+local boats = {"ironclad", "paddle-steamer", "raft", "amphibious-car", "container-ship"}
 
-local motor_boats = {"ironclad", "paddle-steamer"}
+local motor_boats = {"ironclad", "paddle-steamer", "amphibious-car", "container-ship"}
 
 local special_tiles = {"tile-face-north", "tile-face-east", "tile-face-south", "tile-face-west"}
 
 local sailing_boats = {"raft"}
 
 --Note that all of these function take an entity name
-is_motor_boat = function(name)
+is_boat = function(name)
   return is_type(name, boats)
 end
 
-is_boat = function(name)
+is_motor_boat = function(name)
   return is_type(name, motor_boats)
 end
 
@@ -48,7 +48,7 @@ is_type = function(name, array)
 end
 
 
-
+--The wind should push boats a little, especially sailing boats
 calculate_wind_impact = function()
   for k, player in pairs(game.players) do
     if (player.connected and player.character) then --for all active players
@@ -96,17 +96,15 @@ calculate_wind_impact = function()
   end
 end
 
+--Remove all resources from water that aren't sea oil when a chunk is created.
 function cleanse_chunk(event)
   local box = event.area
   local surface = event.surface
   local entities = surface.find_entities_filtered{area = box, type = "resource"}
-  local entities2 = surface.find_entities_filtered{area = box, type = "decorative"}
-  local entities3 = surface.find_entities_filtered{area = box, type = "tree"}
-  local entities4 = surface.find_entities_filtered{area = box, type = "unit-spawner"}
-  local to_be_destroyed = {}
+  local entities2 = surface.find_entities_filtered{area = box, type = "tree"}
+  local entities3 = surface.find_entities_filtered{area = box, type = "unit-spawner"}
   for k,v in pairs(entities2) do table.insert(entities, v) end --merge the tables.
   for k,v in pairs(entities3) do table.insert(entities, v) end --merge the tables.
-  for k,v in pairs(entities4) do table.insert(entities, v) end --merge the tables.
 
   for _, i in pairs(entities) do
     -- if (i.valid) -- then only needed when deleting surrounding oil, not the current oil
@@ -120,7 +118,7 @@ function cleanse_chunk(event)
 
          for key, j in pairs(neighbours) do
            if ((j ~= i) or not (is_water_tile(tile.name))) then --if there are close neighbours or oil is on land, destroy it.
-             --Can either delete the surround oil or delete this oil.
+             --Can either delete the surrounding oil or delete this oil.
              i.destroy()
              break
            end
@@ -140,4 +138,10 @@ function cleanse_chunk(event)
       end --end if
    --end
   end --end for
+  --TODO now that decoratives aren't entities, must run through every tile in the chunk and if it's a water tile, call delete decoratives on it.
+  local top_left = area.left_top
+  local bottom_right = area.right_bottom
+  --nested for loops increased by one at a time in x and y directions
+  --check if water tile. If so, delete surface.destroy_decoratives(bounding_box)
+  
 end

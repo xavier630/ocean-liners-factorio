@@ -2,6 +2,7 @@
 
 --entity
 require("prototypes.entity.entities")
+require("prototypes.entity.command-tiles")
 
 --items
 require("prototypes.item.items")

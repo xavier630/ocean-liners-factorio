@@ -9,8 +9,9 @@ if not (biters_cross_water) then
   end
 end
 
+--Set collision mask of all biter spawners
+local biter_lair = data.raw["unit-spawner"]
 if (biters_bases_spawn_on_water) then
-  --Change collision mask of all biter spawners
   for k,v in pairs(biter_lair) do
     v.collision_mask={"player-layer"} --only the spawners, not the bugs.
   end
@@ -30,7 +31,6 @@ end
 --Pass through pipes
 local pipe = data.raw["pipe"]
 local pipe_to_ground = data.raw["pipe-to-ground"]
-
 if (travel_through_pipes) then
   for k,v in pairs(pipe) do --collision changes apply to all pipes.
     v.collision_mask={"object-layer"}
@@ -55,6 +55,14 @@ if (explosives_create_water) then
       condition = { "item-layer", "object-layer" } -- just item-layer
   }
 end
+
+--[[Decoratives on water
+if not (decoratives_on_water) then
+  decoratives = data.raw["optimized-decorative"]
+  for k,v in pairs(decoratives) do
+    v.collision_mask={"layer-14", "object-layer", "water-tile"} --None on water
+  end
+end]]
 
 --Oil coverage
 data.raw["resource"]["sea-oil"].autoplace.coverage=sea_oil_coverage

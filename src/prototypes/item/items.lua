@@ -85,9 +85,4 @@ data:extend(
       place_result = "ocean-power-pole",
       stack_size = 50
     },
-
-
-
-
-
   })

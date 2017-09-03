@@ -1,18 +1,33 @@
 require("config")
 
---biter swimming
+--Biter swimming
 if not (biters_cross_water) then
-  require("functions.biters-cross-water")
+  --Makes it so that biters CAN'T cross water.
+  local biters = data.raw["unit"]
+  for k,v in pairs(biters) do
+    v.collision_mask={"water-tile", "player-layer"}
+  end
 end
 
---player swimming
+if (biters_bases_spawn_on_water) then
+  --Change collision mask of all biter spawners
+  for k,v in pairs(biter_lair) do
+    v.collision_mask={"player-layer"} --only the spawners, not the bugs.
+  end
+else
+  for k,v in pairs(biter_lair) do
+    v.collision_mask={"water-tile", "player-layer", "layer-14"} --only the spawners, not the bugs.
+  end
+end
+
+--Player swimming
 if (player_swimming) then
   data.raw["player"]["player"].collision_mask={"player-layer"}
 else
   data.raw["player"]["player"].collision_mask={"player-layer", "water-tile", "layer-14"}
 end
 
---pass through pipes
+--Pass through pipes
 local pipe = data.raw["pipe"]
 local pipe_to_ground = data.raw["pipe-to-ground"]
 
@@ -32,14 +47,14 @@ else
   end
 end
 
---explosives
+--Explosives
 if (explosives_create_water) then
   data.raw["item"]["explosives"].place_as_tile = {
       result = "water",
-      condition_size = 1,
-      condition = { "item-layer", "object-layer" }
+      condition_size = 1, -- 0
+      condition = { "item-layer", "object-layer" } -- just item-layer
   }
 end
 
---oil coverage
+--Oil coverage
 data.raw["resource"]["sea-oil"].autoplace.coverage=sea_oil_coverage

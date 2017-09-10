@@ -82,7 +82,8 @@ Drivable ships to sail across the oceans. You can even use landfill from within 
 
 
 # Changelog <br>
-
+* 0.2.2 - Improved pumpjack speeds by 10x to accommodate for changes to Vanilla. Added deletion of new Vanilla decorative non-entities if they spawn over water. Add config option for Biter bases on Water. 
+* 0.2.1 - Fixed issue with pumpjacks not connecting to pipes, added compatability for helicopter mod. Improved boat collisions with objects on the water.
 * 0.2.0 - Sea oil no longer can be spawned atop other resources, added special tiles to automate ship travel. Fixed compatibility issues with the Aircraft mod. This version may require a new game to function properly. Cars can no longer be placed over deep sea and the player can't swim on it when swimming is disabled. Added amphibious cars and container ships. Explosives can now be used to create water (it takes a lot of skill and patience though to get it right). More config options have been added.
 A new world is recommended. Version targets Factorio 0.15.
 

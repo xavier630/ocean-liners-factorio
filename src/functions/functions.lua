@@ -124,10 +124,10 @@ function cleanse_chunk(event)
            end
          end
 
-        --Remove land oil-- "not (is_water_tile(tile.name)))" - this condition removes any oil spawned on land.
-        --the reason it needs to spawn on land is that oil can't have a ground tile collision_mask
-        --because oil rigs need that and rigs will be unplaceable if they both have it.
-        -- so solution is to spawn it everywhere and delete any not on the ocean.
+        -- Remove land oil -- "not (is_water_tile(tile.name)))" - this condition removes any oil spawned on land.
+        -- the reason it needs to spawn on land is that oil can't have a ground tile collision_mask
+        -- because oil rigs need that and rigs will be unplaceable if they both have it.
+        -- So the solution is to spawn it everywhere and delete any not on the ocean.
 
 
       else
@@ -138,10 +138,21 @@ function cleanse_chunk(event)
       end --end if
    --end
   end --end for
-  --TODO now that decoratives aren't entities, must run through every tile in the chunk and if it's a water tile, call delete decoratives on it.
-  local top_left = area.left_top
-  local bottom_right = area.right_bottom
+
+  -- Now that decoratives aren't entities, must run through every tile in the chunk and if it's a water tile, call delete decoratives on it.
+  local top_left = box.left_top
+  local bottom_right = box.right_bottom
+
+  for i = top_left.y, bottom_right.y, 1 do
+    for j = top_left.x, bottom_right.x, 1 do
+       local tile = surface.get_tile(j, i)
+       if (is_water_tile(tile.name)) then
+         local area = {{j, i}, {j, i}} -- Just clear the one tile
+         surface.destroy_decoratives(area)
+       end
+    end
+  end
   --nested for loops increased by one at a time in x and y directions
   --check if water tile. If so, delete surface.destroy_decoratives(bounding_box)
-  
+
 end

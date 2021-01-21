@@ -1,5 +1,5 @@
 # Deprecated
-Use https://github.com/rudegrass/cargo_ships instead.
+Use [Cargo Ships](https://github.com/rudegrass/cargo_ships) instead
 
 
 # Ocean-Liners-Factorio

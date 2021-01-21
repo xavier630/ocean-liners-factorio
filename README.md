@@ -1,6 +1,8 @@
+-----------------------------------------------------
+
 # Deprecated
 Use [Cargo Ships](https://github.com/rudegrass/cargo_ships) instead
-
+-----------------------------------------------------
 
 # Ocean-Liners-Factorio
 This mods adds ships to Factorio.

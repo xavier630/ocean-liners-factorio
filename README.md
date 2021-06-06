@@ -7,9 +7,7 @@ Use [Cargo Ships](https://github.com/rudegrass/cargo_ships) instead
 
 
 # Ocean Liners Factorio
-This mods adds ships to Factorio.
-
-Drivable ships to sail across the oceans. You can even use landfill from within a ship!
+This mods adds that can be sailed across the oceans to Factorio.
 
 # Ideas: <br>
 
